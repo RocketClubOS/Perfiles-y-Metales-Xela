@@ -1,0 +1,1057 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#050505;
+    font-family:'Montserrat', sans-serif;
+    color:white;
+}
+
+.hero{
+    min-height:100vh;
+    padding:20px;
+    background:
+        linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.95)),
+        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1974&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+/* NAVBAR */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:40px;
+    padding-bottom:20px;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo h1{
+    font-size:24px;
+    font-weight:700;
+    line-height:1.1;
+}
+
+.logo span{
+    color:#f5b400;
+}
+
+.phone{
+    color:#f5b400;
+    font-weight:700;
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:30px;
+}
+
+/* TEXT */
+
+.hero-text{
+    text-align:center;
+}
+
+.hero-text h2{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:70px;
+    line-height:0.9;
+    margin-bottom:20px;
+    text-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+.hero-text span{
+    color:#f5b400;
+}
+
+.hero-text p{
+    font-size:20px;
+    color:#cccccc;
+    margin-bottom:30px;
+}
+
+.hero-text button{
+    background:#f5b400;
+    color:black;
+    border:none;
+    padding:18px 35px;
+    font-size:18px;
+    font-weight:700;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+
+    box-shadow:0 0 25px rgba(245,180,0,0.35);
+}
+
+.hero-text button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 40px rgba(245,180,0,0.5);
+}
+
+.hero-subtitle{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #f5f5f5;
+}
+
+/* IMAGE */
+
+.hero-image img{
+    width:320px;
+    max-width:100%;
+}
+
+/* MOBILE */
+
+@media(min-width:768px){
+
+    .hero-content{
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:flex-start;
+    }
+
+    .hero-text{
+        text-align:left;
+        max-width:500px;
+    }
+
+    .hero-text h2{
+        font-size:110px;
+    }
+
+    .hero-image img{filter: drop-shadow(0 0 35px rgba(245,180,0,0.35));
+        width:430px;
+        transform: translateY(-100px);
+    }
+
+}
+.products-section{
+    padding:60px 30px;
+    background:#050505;
+}
+
+.section-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.section-header h2{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:42px;
+    letter-spacing:1px;
+}
+
+.section-header span,
+.section-header a{
+    color:#f5b400;
+}
+
+.section-header a{
+    font-weight:700;
+    text-decoration:none;
+}
+
+.products-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:20px;
+}
+
+.product-card{
+    background:linear-gradient(180deg, #1a1a1a, #0b0b0b);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:16px;
+    overflow:hidden;
+    padding-bottom:18px;
+    transition:0.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-5px);
+    border-color:#f5b400;
+    box-shadow:0 0 25px rgba(245,180,0,0.18);
+}
+
+.product-image{
+    height:160px;
+    background-size:cover;
+    background-position:center;
+    margin-bottom:15px;
+}
+
+.tube{
+    background-image:url('images/tubos.jpg');
+}
+
+.profiles{
+    background-image:url('images/perfiles.jpg');
+}
+
+.structures{
+    background-image:url('images/structures.jpg');
+}
+.sheets{
+    background-image:url('images/laminas.jpg');
+}
+.product-card h3{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:28px;
+    color:#fff;
+    padding:0 16px;
+}
+
+.product-card p{
+    color:#bdbdbd;
+    font-size:14px;
+    padding:0 16px;
+}
+
+@media(max-width:768px){
+    .products-grid{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+    .section-header h2{
+        font-size:34px;
+    }
+
+    .product-image{
+        height:120px;
+    }
+}
+.benefits-section{
+    padding:30px;
+    background:#050505;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:18px;
+}
+
+.benefit-card{
+    background:linear-gradient(180deg, #181818, #090909);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:18px;
+    padding:25px 20px;
+    min-height:180px;
+}
+
+.benefit-icon{
+    color:#f5b400;
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.benefit-card h3{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:28px;
+    line-height:1;
+    margin-bottom:12px;
+}
+
+.benefit-card p{
+    color:#bdbdbd;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.benefit-card.whatsapp .benefit-icon{
+    color:#25D366;
+}
+
+@media(max-width:768px){
+    .benefits-section{
+        grid-template-columns:repeat(2, 1fr);
+        padding:25px 20px;
+    }
+
+    .benefit-card{
+        min-height:160px;
+    }
+}
+.location-section{
+    padding:30px;
+    display:grid;
+    grid-template-columns:1fr 1.5fr;
+    gap:25px;
+    align-items:center;
+    background:#050505;
+}
+
+.location-info{
+    background:linear-gradient(180deg,#151515,#080808);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
+    padding:35px;
+}
+
+.location-info h2{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:52px;
+    line-height:0.95;
+    margin-bottom:20px;
+}
+
+.location-info span{
+    color:#f5b400;
+}
+
+.location-info p{
+    color:#cfcfcf;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.map-btn{
+    background:#111;
+    color:white;
+    border:1px solid rgba(255,255,255,0.15);
+    padding:15px 30px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:700;
+}
+
+.map-btn:hover{
+    border-color:#f5b400;
+}
+
+.location-image img{
+    width:100%;
+    border-radius:20px;
+    display:block;
+}
+
+@media(max-width:768px){
+
+    .location-section{
+        grid-template-columns:1fr;
+    }
+
+    .location-info h2{
+        font-size:42px;
+    }
+
+}
+.hidden{
+    display:none;
+}
+
+.chat-box{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:360px;
+    max-width:calc(100% - 40px);
+    height:500px;
+    background:#0b0b0b;
+    border:1px solid rgba(245,180,0,0.4);
+    border-radius:20px;
+    box-shadow:0 0 45px rgba(245,180,0,0.25);
+    overflow:hidden;
+    z-index:9999;
+    display:flex;
+    flex-direction:column;
+}
+
+.chat-header{
+    background:linear-gradient(90deg,#111,#1c1c1c);
+    padding:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.chat-header strong{
+    color:#f5b400;
+    font-size:22px;
+}
+
+.chat-header button{
+    background:none;
+    border:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.chat-messages{
+    flex:1;
+    padding:18px;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.bot-message,
+.user-message{
+    padding:12px 14px;
+    border-radius:14px;
+    font-size:14px;
+    line-height:1.4;
+    max-width:85%;
+}
+
+.bot-message{
+    background:#1c1c1c;
+    color:white;
+    align-self:flex-start;
+    border:1px solid rgba(255,255,255,0.08);
+}
+.bot-message a {
+    color: #ffb400;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.bot-message a:hover {
+    text-decoration: underline;
+}
+
+.user-message{
+    background:#f5b400;
+    color:black;
+    align-self:flex-end;
+    font-weight:600;
+}
+
+.chat-input{
+    display:flex;
+    padding:14px;
+    gap:10px;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.chat-input input{
+    flex:1;
+    background:#151515;
+    border:1px solid rgba(255,255,255,0.12);
+    color:white;
+    border-radius:12px;
+    padding:12px;
+    outline:none;
+}
+
+.chat-input button{
+    background:#f5b400;
+    color:black;
+    border:none;
+    border-radius:12px;
+    padding:0 16px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+@media(max-width:600px){
+    .chat-box{
+        right:15px;
+        left:15px;
+        bottom:15px;
+        width:auto;
+        height:70vh;
+    }
+}
+.hidden {
+    display: none;
+}
+.hero-divider{
+    width:450px;
+    height:3px;
+    background:#f5b400;
+    margin-top:25px;
+    margin-bottom:25px;
+}
+.hero-trust{
+  display:flex;
+    gap:28px;
+    margin-top:26px;
+    flex-wrap:nowrap;
+}
+
+.hero-trust span{
+    position:relative;
+    color:#f2f2f2;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:0.8px;
+    text-transform:uppercase;
+    padding-left:14px;
+}
+
+.hero-trust span::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+   width:10px;
+    height:10px;
+    background:#f5b400;
+    border-radius:50%;
+    box-shadow:0 0 12px rgba(245,180,0,0.75);
+}
+
+.hero-local{
+    margin-top:20px !important;
+    font-size:14px !important;
+    color:#e0e0e0 !important;
+    font-weight:600;
+    letter-spacing:0.3px;
+}
+
+@media(max-width:768px){
+    .hero-trust{
+        justify-content:center;
+        gap:12px;
+    }
+
+    .hero-trust span{
+        font-size:11px;
+    }
+
+    .hero-local{
+        text-align:center;
+        font-size:13px !important;
+    }
+}
+@media (min-width: 769px) {
+    .mobile-version {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .desktop-version {
+        display: none;
+    }
+
+    body {
+        margin: 0;
+        background: #050505;
+        overflow-x: hidden;
+    }
+}
+
+body{
+    margin:0;
+    background:#050505;
+    color:white;
+    font-family:'Montserrat',sans-serif;
+}
+
+.mobile-page{
+    background:#050505;
+    padding-bottom:100px;
+}
+
+.mobile-header{
+    height:70px;
+    padding:12px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #222;
+}
+
+.mobile-logo-text h2{
+    margin:0;
+    line-height:0.9;
+    font-size:18px;
+    font-weight:800;
+}
+
+.mobile-logo-text span{
+    color:#f5aa00;
+}
+
+.mobile-header-phone{
+    color:#f5aa00;
+    text-decoration:none;
+    font-weight:700;
+}
+
+.mobile-menu{
+    background:#111;
+    border:1px solid #333;
+    color:white;
+    width:46px;
+    height:46px;
+    border-radius:8px;
+}
+
+.mobile-hero-content {
+    display: grid;
+    grid-template-columns: 52% 48%;
+    align-items: center;
+    padding: 40px 32px 10px;
+    position: relative;
+}
+.mobile-hero-text{
+    transform: translateY(-30px);
+}
+
+.mobile-hero-text h1 {
+    font-size: 52px;
+    line-height: 0.9;
+    max-width: 100%;
+}
+
+.mobile-hero-text h2 {
+    font-size: 29px;
+    line-height: 1;
+}
+
+.mobile-hero-bobby img {
+    width: 145%;
+    margin-left: -45px;
+    margin-top: -20px;
+}
+
+.mobile-trust-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 18px 32px;
+    gap: 12px;
+}
+
+.mobile-trust-row div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.mobile-bobby-cta {
+    margin: 22px 32px;
+    padding: 18px;
+    border: 1px solid #f5aa00;
+    border-radius: 14px;
+    background: #111;
+    display: grid;
+    grid-template-columns: 55px 1fr auto;
+    align-items: center;
+    gap: 14px;
+}
+
+.mobile-btn {
+    background: #f5aa00;
+    color: #050505;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-weight: 900;
+    font-size: 13px;
+}
+.mobile-hero-content {
+    grid-template-columns: 58% 42%;
+    padding: 34px 22px 8px;
+}
+
+.mobile-hero-text h1 {
+    font-size: 35px;
+    line-height: 0.92;
+    letter-spacing: 1px;
+}
+
+.mobile-hero-text h2 {
+    font-size: 24px;
+    line-height: 1.05;
+    margin-top: 14px;
+}
+
+.mobile-hero-bobby img {
+    width: 135%;
+    margin-left: -18px;
+    margin-top: -10px;
+}
+
+.mobile-trust-row {
+    padding: 14px 24px;
+}
+
+.mobile-bobby-cta {
+    margin: 22px 24px;
+    grid-template-columns: 45px 1fr 130px;
+}
+
+.mobile-bobby-copy{
+    display:flex;
+    align-items:center;
+}
+
+.mobile-bobby-copy p{
+    margin:0;
+    font-size:20px;
+    font-weight:600;
+    color:#f2f2f2;
+}
+
+.mobile-btn {
+    padding: 14px 12px;
+    font-size: 14px;
+}
+.mobile-hero-section {
+    background:
+        url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 20px;
+}
+
+.mobile-hero-text h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 44px;
+    line-height: .88;
+    letter-spacing: 1px;
+    color: #f2f2f2;
+    text-shadow: 0 3px 0 rgba(0,0,0,.5), 0 0 12px rgba(255,255,255,.18);
+}
+
+.mobile-hero-text h1 span {
+    color: #f5aa00;
+    text-shadow: 0 3px 0 rgba(0,0,0,.7), 0 0 14px rgba(245,170,0,.35);
+}
+
+.mobile-hero-text h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 23px;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: #f4f4f4;
+    text-shadow: 0 2px 0 rgba(0,0,0,.55);
+}
+
+.mobile-hero-text h2 span {
+    color: #f5aa00;
+}
+
+.mobile-hero-bobby img {
+    filter: drop-shadow(0 0 24px rgba(245,170,0,.35));
+}
+
+.mobile-trust-row {
+    border-top: 2px solid rgba(245,170,0,.65);
+    background: rgba(0,0,0,.55);
+}
+
+.mobile-trust-row p {
+    font-size: 15px;
+    font-weight: 700;
+    color: #f1f1f1;
+}
+/* ===== BOBBY CTA ===== */
+.mobile-bobby-cta{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:30px 20px;
+
+    border:3px solid #f5b400;
+    border-radius:28px;
+
+    background:#0b0b0b;
+
+    margin:30px 20px;
+}
+
+.mobile-bobby-copy{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.mobile-bobby-copy h2{
+    font-size:25px;
+    line-height:1.1;
+    font-weight:800;
+    color:white;
+    margin-bottom:12px;
+}
+
+.mobile-bobby-copy p{
+    font-size:14px;
+    font-weight:700;
+    color:#f5b400;
+    line-height:1.4;
+}
+
+.mobile-bobby-cta .mobile-btn{
+    position:static;
+    width:85%;
+    max-width:300px;
+    margin:0;
+    padding:18px 22px;
+    display:block;
+}
+.mobile-bobby-cta {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+.mobile-bobby-copy {
+    width: 100% !important;
+    display: block !important;
+    text-align: center !important;
+    margin: 0 0 24px 0 !important;
+}
+
+.mobile-bobby-copy h2 {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 0 12px 0 !important;
+    text-align: center !important;
+}
+
+.mobile-bobby-copy p {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    text-align: center !important;
+}
+
+.mobile-bobby-cta .mobile-btn {
+    display: block !important;
+    width: 85% !important;
+    max-width: 420px !important;
+    margin: 0 auto !important;
+    position: static !important;
+}
+/* =========================
+   PRODUCTS SECTION
+========================= */
+
+.mobile-products-section{
+    padding:30px 18px;
+}
+
+.mobile-section-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.mobile-section-title h2{
+    margin:0;
+    color:white;
+    font-size:34px;
+    font-family:'Bebas Neue', sans-serif;
+    letter-spacing:1px;
+}
+
+.mobile-section-title h2 span{
+    color:#f5aa00;
+}
+
+.mobile-section-title a{
+    color:#f5aa00;
+    text-decoration:none;
+    font-weight:700;
+    font-size:15px;
+}
+
+/* GRID */
+
+.mobile-products-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+/* CARD */
+
+.mobile-product-card{
+    background:#0d0d0d;
+    border:1px solid #242424;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 0 15px rgba(0,0,0,.4);
+}
+
+/* IMAGE */
+
+.mobile-product-card img{
+    width:100%;
+    height:120px;
+    object-fit:cover;
+    display:block;
+}
+
+/* INFO */
+
+.mobile-product-info{
+    padding:12px;
+}
+
+.mobile-product-info h3{
+    margin:0;
+    color:white;
+    font-size:20px;
+    font-family:'Bebas Neue', sans-serif;
+    letter-spacing:1px;
+}
+
+.mobile-product-info p{
+    margin-top:6px;
+    color:#bdbdbd;
+    font-size:12px;
+    line-height:1.3;
+}
+/* =========================
+   BENEFITS
+========================= */
+
+.mobile-benefits-box{
+    padding:0 18px 30px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+.mobile-benefits-box article{
+    background:#0d0d0d;
+    border:1px solid #222;
+    border-radius:14px;
+    padding:18px 14px;
+}
+
+.benefit-icon{
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.mobile-benefits-box h3{
+    color:white;
+    font-size:18px;
+    line-height:1;
+    margin-bottom:10px;
+    font-family:'Bebas Neue', sans-serif;
+    letter-spacing:1px;
+}
+
+.mobile-benefits-box p{
+    color:#c4c4c4;
+    font-size:13px;
+    line-height:1.4;
+    margin:0;
+}
+/* =========================
+   LOCATION
+========================= */
+
+.mobile-location-card{
+    margin:0 18px 30px;
+
+    background:#0d0d0d;
+
+    border:1px solid #222;
+    border-radius:18px;
+
+    overflow:hidden;
+}
+
+.mobile-location-image img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+
+.mobile-location-text{
+    padding:22px;
+    text-align:center;
+}
+
+.mobile-location-text h2{
+    margin:0 0 15px;
+
+    font-family:'Bebas Neue', sans-serif;
+    font-size:34px;
+    line-height:1;
+    letter-spacing:1px;
+
+    color:white;
+}
+
+.mobile-location-text h2 span{
+    color:#f5aa00;
+}
+
+.mobile-location-text p{
+    color:#c7c7c7;
+    font-size:15px;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+.mobile-map-btn{
+    display:inline-block;
+
+    padding:14px 24px;
+
+    background:#f5aa00;
+    color:black;
+
+    text-decoration:none;
+
+    font-weight:800;
+
+    border-radius:12px;
+}
+.mobile-whatsapp-fixed {
+    width: calc(100% - 32px);
+    margin: 22px 16px 0;
+
+    background: #f5b400;
+    color: #000;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    padding: 16px 18px;
+    border-radius: 18px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: .4px;
+
+    box-sizing: border-box;
+    box-shadow: 0 10px 28px rgba(0,0,0,.35);
+}
+
+.mobile-whatsapp-fixed span,
+.mobile-whatsapp-fixed strong {
+    color: #000;
+}
+
+.mobile-whatsapp-fixed strong {
+    font-weight: 900;
+}

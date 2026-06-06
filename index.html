@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfiles y Metales Xela</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script>
+    if (/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) {
+    window.location.href = "mobile.html";
+    }
+</script>
+</head>
+
+<body>
+
+<div class="desktop-version">
+
+<section class="hero">
+
+    <nav class="navbar">
+        <div class="logo">
+            <h1>PERFILES Y METALES <span>XELA</span></h1>
+        </div>
+
+        <div class="phone">
+            4864-9231
+        </div>
+    </nav>
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+            <h2>
+                TODO LO QUE
+                <span>NECESITÁS</span>
+            </h2>
+
+            <p>
+                EN PERFILES Y METALES<br>
+                EN UN SOLO LUGAR
+            </p>
+
+            <button>
+                HABLÁ CON BOBBY
+            </button>
+
+            <div class="hero-divider"></div>
+
+            <div class="hero-trust">
+                <span>Material confiable</span>
+                <span>Precios competitivos</span>
+                <span>Stock inmediato</span>
+            </div>
+
+            <p class="hero-local">
+                El aliado de confianza para herreros y constructores de Xela.
+            </p>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/bobby.png" alt="Bobby">
+        </div>
+
+    </div>
+
+</section>
+
+<section class="products-section">
+    <div class="section-header">
+        <h2>NUESTROS <span>PRODUCTOS</span></h2>
+        <a href="#">Ver todos →</a>
+    </div>
+
+    <div class="products-grid">
+        <div class="product-card">
+            <div class="product-image tube"></div>
+            <h3>TUBOS</h3>
+            <p>Negros / Galvanizados</p>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image profiles"></div>
+            <h3>PERFILES</h3>
+            <p>Cuadrados / Rectangulares</p>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image structures"></div>
+            <h3>ESTRUCTURAS</h3>
+            <p>Vigas / Ángulos / Platinas</p>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image sheets"></div>
+            <h3>LÁMINAS</h3>
+            <p>Lisas / Antideslizantes</p>
+        </div>
+    </div>
+</section>
+
+<section class="benefits-section">
+    <div class="benefit-card">
+        <div class="benefit-icon">✅</div>
+        <h3>STOCK DISPONIBLE</h3>
+        <p>Inventario listo para entrega inmediata.</p>
+    </div>
+
+    <div class="benefit-card">
+        <div class="benefit-icon">%</div>
+        <h3>PRECIOS JUSTOS</h3>
+        <p>La mejor calidad al mejor precio.</p>
+    </div>
+
+    <div class="benefit-card">
+        <div class="benefit-icon">📍</div>
+        <h3>SOMOS DE XELA</h3>
+        <p>Comprá directo, sin intermediarios.</p>
+    </div>
+
+    <div class="benefit-card whatsapp">
+        <div class="benefit-icon">☎</div>
+        <h3>ASESORÍA RÁPIDA</h3>
+        <p>Escribinos por WhatsApp y te ayudamos.</p>
+    </div>
+</section>
+
+<section class="location-section">
+    <div class="location-info">
+        <h2>
+            VISITÁ NUESTRO LOCAL
+            <span>EN XELA</span>
+        </h2>
+
+        <p>
+            1a Calle 34-12, Zona 6<br>
+            Quetzaltenango, Guatemala
+        </p>
+
+        <button class="map-btn">
+            VER EN MAPA
+        </button>
+    </div>
+
+    <div class="location-image">
+        <img src="images/store.jpg" alt="Perfiles y Metales Xela">
+    </div>
+</section>
+
+</div>
+
+<div class="mobile-version">
+
+    <section class="mobile-hero">
+
+        <div class="mobile-top">
+            <h2>PERFILES Y METALES <span>XELA</span></h2>
+            <p>4864-9231</p>
+        </div>
+
+        <h1>
+            TODO LO QUE<br>
+            NECESITÁS
+        </h1>
+
+        <p class="mobile-subtitle">
+            EN PERFILES Y METALES<br>
+            EN UN SOLO LUGAR
+        </p>
+
+        <img src="images/bobby.png" alt="Bobby" class="mobile-bobby">
+
+        <button class="mobile-btn">
+            HABLÁ CON BOBBY
+        </button>
+
+        <div class="mobile-benefits">
+            <span>Material confiable</span>
+            <span>Precios competitivos</span>
+            <span>Stock inmediato</span>
+        </div>
+
+        <p class="mobile-local">
+            El aliado de confianza para herreros y constructores de Xela.
+        </p>
+
+    </section>
+
+</div>
+
+<div class="chat-box hidden" id="chatBox">
+    <div class="chat-header">
+        <strong>Bobby</strong>
+        <button id="closeChat">×</button>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+        <div class="bot-message">
+            ¡Hola! Soy Bobby. Preguntame precios, medidas o disponibilidad.
+        </div>
+    </div>
+
+    <div class="chat-input">
+        <input id="chatInput" type="text" placeholder="Escribí tu pregunta...">
+        <button id="sendChat" type="button">Enviar</button>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
