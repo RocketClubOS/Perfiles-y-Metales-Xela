@@ -71,7 +71,7 @@ async function sendQuestion() {
     chatMessages.appendChild(loadingMessage);
 
     try {
-        const response = await fetch("/preguntar", {
+        const response = await fetch("https://perfiles-y-metales-xela-backend.onrender.com/preguntar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
