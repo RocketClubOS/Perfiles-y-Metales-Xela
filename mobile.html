@@ -26,12 +26,23 @@
 </div>
 
             <a class="mobile-header-phone" href="https://wa.me/50248649231">
-                💬 4864-9231
+                💬 WhatsApp
             </a>
 
-            <button class="mobile-menu" type="button">
+            <button class="mobile-menu" 
+                     type="button"
+                     aria-label="abrir menu"
+            >
                 ☰
             </button>
+            <nav class="mobile-nav" id="mobileNav">
+               <a href="mobile.html">Inicio</a>
+               <a href="productos.html">Productos</a>
+               <a href="encuesta.html">Encuesta</a>
+               <a href="rewards.html">Recompensas</a>
+               <a href="admin.html">Admin</a>
+               <a href="https://wa.me/50248649231">WhatsApp</a>
+             </nav>
         </header>
 
         <!-- HERO -->
@@ -223,6 +234,15 @@
             <button id="sendChat" type="button">Enviar</button>
         </div>
     </div>
+    
+    <script>
+    const menuButton = document.querySelector(".mobile-menu");
+    const mobileNav = document.querySelector("#mobileNav");
+
+    menuButton.addEventListener("click", () => {
+        mobileNav.classList.toggle("is-open");
+    });
+    </script>
 
     <script src="app.js"></script>
 
