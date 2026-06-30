@@ -1,0 +1,327 @@
+body {
+  margin: 0;
+  padding: 30px 15px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c, #2b2b2b);
+  color: #ffffff;
+}
+
+#surveyForm {
+  max-width: 720px;
+  margin: auto;
+  background: #151515;
+  padding: 32px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 193, 7, 0.35);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+}
+
+#surveyForm::before {
+  content: "Encuesta de Satisfacción";
+  display: block;
+  font-size: 30px;
+  font-weight: 800;
+  color: #ffc107;
+  text-align: center;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+#surveyForm::after {
+  content: "Perfiles y Metales Xela";
+  display: block;
+  text-align: center;
+  color: #cccccc;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+label {
+  display: block;
+  margin: 16px 0 7px;
+  font-weight: 700;
+  color: #f2f2f2;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #444;
+  background: #232323;
+  color: #ffffff;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.18);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.col {
+  flex: 1;
+}
+
+.rating-wrap {
+  background: #202020;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid #333;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 38px;
+  color: #555;
+  cursor: pointer;
+  margin: 0;
+  transition: 0.2s;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+  color: #ffc107;
+  transform: scale(1.08);
+}
+
+.rating-msg {
+  margin-top: 8px;
+  color: #ffc107;
+  font-weight: 700;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+  accent-color: #ffc107;
+}
+
+button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ffc107, #ff9800);
+  color: #111;
+  font-size: 17px;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.25s;
+  box-shadow: 0 10px 25px rgba(255, 193, 7, 0.25);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(255, 193, 7, 0.35);
+}
+
+.thanks {
+  max-width: 720px;
+  margin: 20px auto;
+  padding: 18px;
+  background: #ffc107;
+  color: #111;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 800;
+  display: none;
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+  body {
+    padding: 18px 12px;
+  }
+
+  #surveyForm {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+
+  #surveyForm::before {
+    font-size: 24px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .rating label {
+    font-size: 34px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}
+/* =========================
+   SURVEY HEADER
+========================= */
+
+.survey-header{
+  width:100%;
+  min-height:80px;
+  padding:14px 32px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px;
+
+  background:#0b0b0b;
+  border-bottom:1px solid rgba(255,184,0,.25);
+
+  box-sizing:border-box;
+}
+
+.survey-logo{
+  flex:0 1 auto;
+  min-width:0;
+}
+
+.survey-logo h1{
+  margin:0;
+  color:#fff;
+
+  font-size:clamp(24px, 2.2vw, 36px);
+  font-weight:900;
+  letter-spacing:1px;
+  line-height:1.05;
+
+  white-space:nowrap;
+}
+
+.survey-logo span{
+  color:#ffb800;
+}
+
+/* =========================
+   MAIN MENU
+========================= */
+
+.main-menu{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:clamp(12px, 1.6vw, 28px);
+
+  flex:1 1 auto;
+  min-width:0;
+}
+
+.main-menu a{
+  color:#fff;
+  text-decoration:none;
+
+  font-size:clamp(14px, 1vw, 17px);
+  font-weight:800;
+
+  white-space:nowrap;
+  transition:.25s ease;
+}
+
+.main-menu a:hover,
+.main-menu a.active{
+  color:#ffb800;
+}
+
+/* =========================
+   WHATSAPP BUTTON
+========================= */
+
+.survey-whatsapp{
+  flex:0 0 auto;
+
+  background:#ffb800;
+  color:#000;
+
+  padding:11px 22px;
+  border-radius:16px;
+
+  font-size:clamp(15px, 1.2vw, 20px);
+  font-weight:900;
+
+  text-decoration:none;
+  white-space:nowrap;
+
+  transition:.25s ease;
+}
+
+.survey-whatsapp:hover{
+  background:#ffc933;
+  transform:translateY(-1px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+  .survey-header{
+    padding:22px 28px;
+    gap:16px;
+  }
+
+  .survey-logo h1{
+    font-size:30px;
+  }
+
+  .main-menu{
+    gap:14px;
+  }
+
+  .main-menu a{
+    font-size:16px;
+  }
+
+  .survey-whatsapp{
+    padding:12px 18px;
+    font-size:16px;
+  }
+}
+
+@media(max-width:950px){
+  .survey-header{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .main-menu{
+    width:100%;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+    gap:12px 18px;
+  }
+}

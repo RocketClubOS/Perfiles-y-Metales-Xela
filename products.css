@@ -1,0 +1,309 @@
+/* ========================================
+PRODUCTS PAGE
+PERFILES Y METALES XELA
+======================================== */
+
+.products-body{
+margin:0;
+background:#0b0b0b;
+color:#fff;
+font-family:'Montserrat',sans-serif;
+}
+
+/* ========================================
+HEADER
+======================================== */
+
+.products-header{
+position:sticky;
+top:0;
+z-index:1000;
+background:#111;
+border-bottom:1px solid rgba(255,193,7,.15);
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:18px 30px;
+}
+
+.products-logo img{
+height:55px;
+}
+
+.products-menu{
+display:flex;
+gap:30px;
+}
+
+.products-menu a{
+color:#ddd;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+.products-menu a:hover{
+color:#ffc107;
+}
+
+.products-whatsapp{
+background:#ffc107;
+color:#111;
+padding:12px 18px;
+border-radius:12px;
+font-weight:700;
+text-decoration:none;
+}
+
+/* ========================================
+HERO
+======================================== */
+
+.products-hero{
+max-width:1200px;
+margin:auto;
+padding:80px 25px;
+text-align:center;
+}
+
+.products-hero span{
+color:#ffc107;
+font-weight:700;
+text-transform:uppercase;
+letter-spacing:2px;
+}
+
+.products-hero h1{
+font-size:4rem;
+margin:15px 0;
+font-weight:800;
+}
+
+.products-hero strong{
+color:#ffc107;
+}
+
+.products-hero p{
+max-width:700px;
+margin:auto;
+font-size:1.1rem;
+color:#bbb;
+line-height:1.7;
+}
+
+/* ========================================
+GRID
+======================================== */
+
+.products-grid-section{
+max-width:1400px;
+margin:auto;
+padding:20px 25px 100px;
+}
+
+.products-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+/* ========================================
+CARD
+======================================== */
+
+.product-card{
+background:#111;
+border:1px solid rgba(255,255,255,.05);
+border-radius:24px;
+overflow:hidden;
+transition:.35s;
+cursor:pointer;
+}
+
+.product-card:hover{
+transform:translateY(-8px);
+border-color:#ffc107;
+box-shadow:0 0 30px rgba(255,193,7,.15);
+}
+
+.product-card img{
+width:100%;
+height:260px;
+object-fit:cover;
+display:block;
+}
+
+.product-card div{
+padding:25px;
+}
+
+.product-card h2{
+margin:0;
+font-size:2rem;
+font-weight:800;
+letter-spacing:1px;
+}
+
+.product-card p{
+margin-top:10px;
+color:#aaa;
+font-size:1rem;
+line-height:1.5;
+}
+
+/* ========================================
+INFO SECTION
+======================================== */
+
+.products-info{
+max-width:1200px;
+margin:auto;
+padding:80px 25px;
+}
+
+.products-info h2{
+text-align:center;
+font-size:3rem;
+margin-bottom:30px;
+}
+
+.products-info > p{
+max-width:850px;
+margin:auto;
+text-align:center;
+color:#bbb;
+line-height:1.8;
+font-size:1.1rem;
+}
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:60px;
+}
+
+.info-grid div{
+background:#111;
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.05);
+}
+
+.info-grid h3{
+margin-top:0;
+color:#ffc107;
+}
+
+.info-grid p{
+color:#bbb;
+line-height:1.7;
+}
+
+/* ========================================
+CTA
+======================================== */
+
+.products-cta{
+text-align:center;
+padding:100px 25px;
+background:linear-gradient(
+180deg,
+transparent,
+rgba(255,193,7,.05)
+);
+}
+
+.products-cta h2{
+font-size:3rem;
+margin-bottom:15px;
+}
+
+.products-cta p{
+color:#bbb;
+margin-bottom:35px;
+}
+
+.products-cta a{
+display:inline-block;
+background:#ffc107;
+color:#111;
+padding:18px 35px;
+border-radius:14px;
+text-decoration:none;
+font-weight:800;
+font-size:1.05rem;
+}
+
+/* ========================================
+FOOTER
+======================================== */
+
+.products-footer{
+padding:50px 25px;
+background:#111;
+text-align:center;
+border-top:1px solid rgba(255,193,7,.1);
+}
+
+.products-footer h3{
+margin-bottom:15px;
+}
+
+.products-footer p{
+color:#999;
+margin:8px 0;
+}
+
+/* ========================================
+MOBILE
+======================================== */
+
+@media(max-width:768px){
+
+.products-header{
+padding:15px;
+}
+
+.products-menu{
+display:none;
+}
+
+.products-logo img{
+height:45px;
+}
+
+.products-whatsapp{
+display:none;
+}
+
+.products-hero{
+padding:60px 20px;
+}
+
+.products-hero h1{
+font-size:2.6rem;
+}
+
+.products-grid{
+grid-template-columns:1fr;
+gap:20px;
+}
+
+.product-card img{
+height:220px;
+}
+
+.product-card h2{
+font-size:1.7rem;
+}
+
+.products-info h2{
+font-size:2.2rem;
+}
+
+.products-cta h2{
+font-size:2.2rem;
+}
+
+}

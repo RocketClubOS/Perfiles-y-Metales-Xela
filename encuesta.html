@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encuesta | Perfiles y Metales Xela</title>
+  <link rel="stylesheet" href="Style.survey.css">
+</head>
+<body class="survey-body">
+  <header class="survey-header">
+    <div class="survey-logo">
+        <h1>PERFILES Y METALES <span>XELA</span></h1>
+    </div>
+
+    <nav class="main-menu">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="encuesta.html" class="active">Encuesta</a>
+        <a href="rewards.html">Recompensas</a>
+    </nav>
+
+   <a href="https://wa.me/50248649231" class="survey-whatsapp">
+    WhatsApp
+   </a>
+</header>
+
+<form id="surveyForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+  <label for="nombre">Nombre (opcional)</label>
+  <input id="nombre" name="nombre" type="text" placeholder="Ej. María López">
+
+  <label for="email">Correo (opcional)</label>
+  <input id="email" name="email" type="email" placeholder="ejemplo@correo.com">
+
+  <div class="row">
+    <div class="col">
+      <label for="producto">Producto/servicio</label>
+      <input id="producto" name="producto" type="text" placeholder="Ej. Perfiles de aluminio">
+    </div>
+    <div class="col">
+      <label for="fecha">Fecha de compra</label>
+      <input id="fecha" name="fecha" type="text" placeholder="MM/AAAA">
+    </div>
+  </div>
+
+  <label for="calidad">¿Cómo calificaría la calidad?</label>
+  <div class="rating-wrap" id="calidad" aria-label="Calidad">
+    <div class="rating" role="radiogroup" aria-labelledby="calidad">
+      <!-- radios (5→1) — labels are stars and are focusable -->
+      <input type="radio" id="star5" name="calidad" value="5" required>
+      <label for="star5" tabindex="0" title="5 estrellas" aria-label="5 estrellas">★</label>
+
+      <input type="radio" id="star4" name="calidad" value="4">
+      <label for="star4" tabindex="0" title="4 estrellas" aria-label="4 estrellas">★</label>
+
+      <input type="radio" id="star3" name="calidad" value="3">
+      <label for="star3" tabindex="0" title="3 estrellas" aria-label="3 estrellas">★</label>
+
+      <input type="radio" id="star2" name="calidad" value="2">
+      <label for="star2" tabindex="0" title="2 estrellas" aria-label="2 estrellas">★</label>
+
+      <input type="radio" id="star1" name="calidad" value="1">
+      <label for="star1" tabindex="0" title="1 estrella" aria-label="1 estrella">★</label>
+    </div>
+    <div class="rating-msg" id="ratingValue">Sin calificar</div>
+  </div>
+
+  <label for="satisfaccion">Nivel de satisfacción</label>
+  <select id="satisfaccion" name="satisfaccion" required>
+    <option value="">Selecciona...</option>
+    <option>Muy satisfecho</option>
+    <option>Satisfecho</option>
+    <option>Neutral</option>
+    <option>Insatisfecho</option>
+    <option>Muy insatisfecho</option>
+  </select>
+
+  <label>¿Nos recomendaría a otras personas?</label>
+  <label style="font-weight:600"><input type="radio" name="recomienda" value="Sí" required> Sí</label>
+  <label style="font-weight:600"><input type="radio" name="recomienda" value="No"> No</label>
+
+  <label for="comentarios">Comentarios o sugerencias</label>
+  <textarea id="comentarios" name="comentarios" rows="5" placeholder="Escribe aquí..." style="resize:vertical"></textarea>
+
+  <div style="margin-top:12px">
+    <label style="font-weight:500"><input type="checkbox" name="consent" required> Acepto que mi respuesta sea utilizada para mejorar el servicio.</label>
+  </div>
+
+  <div>
+    <button type="submit">Enviar encuesta</button>
+  </div>
+</form>
+
+<div id="thanks" class="thanks">Gracias por tu tiempo. ¡Valoramos tu opinión!</div>
+
+</body>
+</html>

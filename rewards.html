@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Club Xela de Perfiles y Metales Xela. Afiliate gratis, consultá tu saldo disponible y disfrutá beneficios exclusivos.">
+    <title>Club Xela | Perfiles y Metales Xela</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/rewards.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Navegación Club Xela">
+            <a class="brand" href="index.html" aria-label="Perfiles y Metales Xela">
+                <span>Perfiles y Metales</span>
+                <strong>Xela</strong>
+            </a>
+
+        <div class="main-menu">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="encuesta.html">Encuesta</a>
+            <a href="rewards.html" class="active">Recompensas</a>
+        </div>
+
+            <a class="whatsapp-link" href="https://wa.me/50248649231" target="_blank" rel="noopener">
+                WhatsApp 4864-9231
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-copy">
+                <p class="eyebrow">Club Xela</p>
+                <h1>Afiliate Gratis y Empezá a Ahorrar</h1>
+                <p class="hero-slogan">Comprá Más. Ahorrá Más.</p>
+                <p class="hero-text">
+                    Registrate con tu WhatsApp, consultá tu saldo disponible y recibí beneficios exclusivos en Perfiles y Metales Xela.
+                </p>
+                <div class="hero-actions">
+                    <a class="primary-button" href="#afiliacion">Afiliarme Gratis</a>
+                    <a class="secondary-button" href="#saldo">Consultar Saldo</a>
+                </div>
+            </div>
+
+            <aside class="saldo-card" aria-label="Ejemplo de saldo disponible">
+                <span>Tu Saldo Disponible</span>
+                <strong>Q125.00</strong>
+                <p>Disponible para descuento en futuras compras</p>
+            </aside>
+        </section>
+
+        <section class="forms-grid" id="afiliacion">
+            <form class="panel-form" id="clubForm">
+                <div class="section-heading">
+                    <p>Afiliación gratuita</p>
+                    <h2>Creá tu cuenta con WhatsApp</h2>
+                </div>
+
+                <label>
+                    Nombre completo
+                    <input name="nombre" type="text" autocomplete="name" required>
+                </label>
+
+                <label>
+                    WhatsApp
+                    <input name="telefono" type="tel" autocomplete="tel" inputmode="tel" required>
+                </label>
+
+                <label>
+                    Ciudad
+                    <input name="ciudad" type="text" value="Quetzaltenango" required>
+                </label>
+
+                <label>
+                    Tipo de cliente
+                    <select name="tipo_cliente" required>
+                        <option value="">Seleccioná una opción</option>
+                        <option>Herrero</option>
+                        <option>Constructor</option>
+                        <option>Hogar</option>
+                        <option>Empresa</option>
+                    </select>
+                </label>
+
+                <button type="submit">Afiliarme Gratis</button>
+                <div class="form-message" id="clubSuccess" aria-live="polite"></div>
+            </form>
+
+            <section class="welcome-panel is-hidden" id="welcomePanel" aria-live="polite">
+                <div class="section-heading">
+                    <p>Cuenta creada</p>
+                    <h2>Bienvenido al Club Xela</h2>
+                </div>
+
+                <dl class="welcome-data">
+                    <div>
+                        <dt>Nombre del cliente</dt>
+                        <dd id="welcomeName">-</dd>
+                    </div>
+                    <div>
+                        <dt>WhatsApp</dt>
+                        <dd id="welcomePhone">-</dd>
+                    </div>
+                    <div>
+                        <dt>Tipo de cliente</dt>
+                        <dd id="welcomeType">-</dd>
+                    </div>
+                    <div>
+                        <dt>Ciudad</dt>
+                        <dd id="welcomeCity">-</dd>
+                    </div>
+                </dl>
+
+                <div class="welcome-balance">
+                    <span>Tu Saldo Disponible:</span>
+                    <strong id="welcomeBalance">Q5.00</strong>
+                    <p>Te regalamos Q5.00 de bienvenida para empezar a ahorrar en tus próximas compras.</p>
+                </div>
+
+                <button class="welcome-button" id="viewBalanceButton" type="button">Ver mi saldo</button>
+            </section>
+
+            <form class="panel-form balance-panel" id="saldoForm">
+                <div class="section-heading">
+                    <p>Consulta rápida</p>
+                    <h2>Tu Saldo Disponible</h2>
+                </div>
+
+                <label>
+                    WhatsApp
+                    <input name="telefono" type="tel" autocomplete="tel" inputmode="tel" required>
+                </label>
+
+                <button type="submit">Consultar Saldo</button>
+                <div class="saldo-result" id="saldoResult" aria-live="polite"></div>
+            </form>
+        </section>
+
+        <section class="benefits-section" id="beneficios">
+            <div class="section-heading centered">
+                <p>Beneficios de Afiliarte</p>
+                <h2>Más valor en cada visita</h2>
+            </div>
+
+            <div class="benefits-grid">
+                <article>
+                    <span>Q</span>
+                    <h3>Saldo acumulado en cada compra</h3>
+                    <p>Acumulá saldo y usalo como descuento en tus próximas visitas.</p>
+                </article>
+                <article>
+                    <span>%</span>
+                    <h3>Promociones exclusivas</h3>
+                    <p>Recibí ofertas especiales para miembros del Club Xela antes que todos.</p>
+                </article>
+                <article>
+                    <span>+</span>
+                    <h3>Ahorro en tus proyectos</h3>
+                    <p>Comprá lámina, tubo, costanera y materiales para construcción mientras acumulás beneficios.</p>
+                </article>
+                <article>
+                    <span>WA</span>
+                    <h3>Atención preferencial por WhatsApp</h3>
+                    <p>Recibí información de productos, ofertas y beneficios directamente en tu teléfono.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="value-strip" aria-label="Ejemplo informativo de saldo acumulado">
+            <div>
+                <p class="eyebrow">Ahorro Acumulado</p>
+                <h2>Tu compra ahora vale más</h2>
+                <p>Cada vez que comprás en Perfiles y Metales Xela, acumulás saldo disponible para ahorrar en futuras compras.</p>
+            </div>
+            <strong>Compra Q1,000 → Recibís Q10 de saldo acumulado</strong>
+        </section>
+
+        <section class="steps-section" id="como-funciona">
+            <div class="section-heading centered">
+                <p>Cómo funciona</p>
+                <h2>Simple para comprar mejor</h2>
+            </div>
+
+            <div class="steps-grid">
+                <article>
+                    <span>1</span>
+                    <h3>Comprás</h3>
+                    <p>Comprá tus materiales normalmente en Perfiles y Metales Xela.</p>
+                </article>
+                <article>
+                    <span>2</span>
+                    <h3>Acumulás saldo</h3>
+                    <p>Tu compra suma saldo disponible en tu cuenta Club Xela.</p>
+                </article>
+                <article>
+                    <span>3</span>
+                    <h3>Ahorrás en futuras compras</h3>
+                    <p>Usá tu saldo acumulado como descuento cuando regresés.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="bobby-section">
+            <div>
+                <p class="eyebrow">Bobby</p>
+                <h2>Preguntale a Bobby por productos, promociones y saldo disponible</h2>
+                <p>Te ayudamos con medidas, disponibilidad, ofertas y dudas sobre Club Xela.</p>
+            </div>
+            <a class="primary-button" href="https://wa.me/50248649231" target="_blank" rel="noopener">
+                Hablar con Bobby
+            </a>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contacto">
+        <div>
+            <a class="brand" href="index.html">
+                <span>Perfiles y Metales</span>
+                <strong>Xela</strong>
+            </a>
+            <p>Material confiable, precios competitivos y stock inmediato.</p>
+        </div>
+
+        <address>
+            10 Calle A 5-29 Zona 2<br>
+            Quetzaltenango, Guatemala<br>
+            Referencia: A unas cuadras de la Marimba.
+        </address>
+
+        <a href="https://wa.me/50248649231" target="_blank" rel="noopener">
+            WhatsApp 4864-9231
+        </a>
+    </footer>
+
+    <script src="js/rewards.js"></script>
+</body>
+
+</html>
