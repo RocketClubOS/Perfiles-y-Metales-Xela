@@ -22,6 +22,18 @@
       <a href="rewards.html">Recompensas</a>
     </nav>
 
+    <button class="mobile-menu-btn" type="button" aria-label="Abrir menu">
+        &#9776;
+    </button>
+
+    <nav class="mobile-dropdown" id="mobileDropdown">
+        <a href="mobile.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="encuesta.html">Encuesta</a>
+        <a href="rewards.html">Recompensas</a>
+        <a href="https://wa.me/50248649231" target="_blank">WhatsApp</a>
+    </nav>
+
     <a href="https://wa.me/50248649231" class="products-whatsapp">WhatsApp</a>
   </header>
 
@@ -207,5 +219,15 @@
     <p>📞 4864-9231</p>
   </footer>
 
+  <script>
+    const mobileMenuButton = document.querySelector(".mobile-menu-btn");
+    const mobileDropdown = document.querySelector("#mobileDropdown");
+
+    if (mobileMenuButton && mobileDropdown) {
+        mobileMenuButton.addEventListener("click", () => {
+            mobileDropdown.classList.toggle("is-open");
+        });
+    }
+  </script>
 </body>
 </html>

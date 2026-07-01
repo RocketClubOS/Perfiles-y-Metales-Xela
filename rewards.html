@@ -28,6 +28,18 @@
             <a href="rewards.html" class="active">Recompensas</a>
         </div>
 
+            <button class="mobile-menu-btn" type="button" aria-label="Abrir menu">
+                &#9776;
+            </button>
+
+            <nav class="mobile-dropdown" id="mobileDropdown">
+                <a href="mobile.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="encuesta.html">Encuesta</a>
+                <a href="rewards.html">Recompensas</a>
+                <a href="https://wa.me/50248649231" target="_blank">WhatsApp</a>
+            </nav>
+
             <a class="whatsapp-link" href="https://wa.me/50248649231" target="_blank" rel="noopener">
                 WhatsApp 4864-9231
             </a>
@@ -240,6 +252,16 @@
     </footer>
 
     <script src="js/rewards.js"></script>
+    <script>
+        const mobileMenuButton = document.querySelector(".mobile-menu-btn");
+        const mobileDropdown = document.querySelector("#mobileDropdown");
+
+        if (mobileMenuButton && mobileDropdown) {
+            mobileMenuButton.addEventListener("click", () => {
+                mobileDropdown.classList.toggle("is-open");
+            });
+        }
+    </script>
 </body>
 
 </html>

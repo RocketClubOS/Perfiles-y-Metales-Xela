@@ -307,3 +307,70 @@ font-size:2.2rem;
 }
 
 }
+
+.mobile-menu-btn,
+.mobile-dropdown {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .products-menu,
+    .main-menu,
+    .nav-links,
+    .desktop-nav,
+    .nav-shell .main-menu {
+        display: none !important;
+    }
+
+    .products-whatsapp {
+        display: none !important;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        background: #ffc400;
+        color: #050505;
+        border: none;
+        border-radius: 12px;
+        padding: 10px 14px;
+        font-size: 24px;
+        font-weight: 900;
+        cursor: pointer;
+    }
+
+    .mobile-dropdown {
+        display: none !important;
+        position: absolute;
+        top: 90px;
+        left: 18px;
+        right: 18px;
+        background: #070707;
+        border: 1px solid rgba(255,255,255,.14);
+        border-radius: 18px;
+        padding: 12px;
+        z-index: 9999;
+        box-shadow: 0 18px 45px rgba(0,0,0,.55);
+    }
+
+    .mobile-dropdown.is-open {
+        display: block !important;
+    }
+
+    .mobile-dropdown a {
+        display: block;
+        color: #fff !important;
+        text-decoration: none;
+        font-weight: 800;
+        padding: 15px 12px;
+        border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .mobile-dropdown a:last-child {
+        border-bottom: none;
+        background: #ffc400;
+        color: #050505 !important;
+        border-radius: 14px;
+        text-align: center;
+        margin-top: 8px;
+    }
+}
