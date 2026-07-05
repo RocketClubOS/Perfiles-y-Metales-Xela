@@ -36,7 +36,7 @@
    </a>
 </header>
 
-<form id="surveyForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+<form id="surveyForm" novalidate>
   <label for="nombre">Nombre (opcional)</label>
   <input id="nombre" name="nombre" type="text" placeholder="Ej. María López">
 
@@ -105,6 +105,57 @@
 <div id="thanks" class="thanks">Gracias por tu tiempo. ¡Valoramos tu opinión!</div>
 
 <script>
+    const surveyForm = document.querySelector("#surveyForm");
+    const thanksMessage = document.querySelector("#thanks");
+    const surveyEndpoint = "https://perfiles-y-metales-xela-backend.onrender.com/api/encuesta";
+
+    if (surveyForm) {
+        surveyForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            if (!surveyForm.checkValidity()) {
+                surveyForm.reportValidity();
+                return;
+            }
+
+            const formData = new FormData(surveyForm);
+            const payload = {
+                nombre: formData.get("nombre") || "",
+                email: formData.get("email") || "",
+                producto: formData.get("producto") || "",
+                fecha: formData.get("fecha") || "",
+                calidad: formData.get("calidad") || "",
+                satisfaccion: formData.get("satisfaccion") || "",
+                recomienda: formData.get("recomienda") || "",
+                comentarios: formData.get("comentarios") || "",
+            };
+
+            try {
+                const response = await fetch(surveyEndpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(payload),
+                });
+
+                const result = await response.json();
+
+                if (!response.ok || !result.ok) {
+                    throw new Error(result.error || "No se pudo enviar la encuesta.");
+                }
+
+                surveyForm.reset();
+
+                if (thanksMessage) {
+                    thanksMessage.style.display = "block";
+                }
+            } catch (error) {
+                alert(error.message || "No se pudo enviar la encuesta.");
+            }
+        });
+    }
+
     const mobileMenuButton = document.querySelector(".mobile-menu-btn");
     const mobileDropdown = document.querySelector("#mobileDropdown");
 
