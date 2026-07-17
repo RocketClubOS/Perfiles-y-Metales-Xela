@@ -210,16 +210,19 @@ button:hover {
   min-width:0;
 }
 
-.survey-logo h1{
+.survey-logo .survey-title{
   margin:0;
   color:#fff;
-
-  font-size:clamp(24px, 2.2vw, 36px);
+  display:block;
+  max-width: min(100%, 320px);
+  font-size:clamp(22px, 2.3vw, 34px);
   font-weight:900;
   letter-spacing:1px;
-  line-height:1.05;
-
-  white-space:nowrap;
+  line-height:1.08;
+  overflow-wrap:anywhere;
+  text-wrap:balance;
+  white-space:normal;
+  text-align:left;
 }
 
 .survey-logo span{
@@ -294,8 +297,8 @@ button:hover {
     gap:16px;
   }
 
-  .survey-logo h1{
-    font-size:30px;
+  .survey-logo .survey-title{
+    font-size:clamp(22px, 3.2vw, 30px);
   }
 
   .main-menu{
@@ -335,6 +338,18 @@ button:hover {
     .survey-header {
         flex-direction: row;
         align-items: center;
+        padding: 14px 18px;
+    }
+
+    .survey-logo {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .survey-logo .survey-title {
+        max-width: min(100%, 240px);
+        font-size: clamp(22px, 5.6vw, 28px);
+        line-height: 1.08;
     }
 
     .main-menu,
@@ -403,5 +418,12 @@ button:hover {
         border-radius: 14px;
         text-align: center;
         margin-top: 8px;
+    }
+}
+
+@media (max-width: 380px) {
+    .survey-logo .survey-title {
+        max-width: 100%;
+        font-size: 22px;
     }
 }
