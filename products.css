@@ -287,8 +287,11 @@ padding:60px 20px;
 margin:15px auto 0;
 max-width:min(100%, 360px);
 padding:0 12px;
+box-sizing:border-box;
 font-size:clamp(26px, 8vw, 34px);
 line-height:1.1;
+overflow-wrap:break-word;
+text-wrap:balance;
 }
 
 .products-grid{

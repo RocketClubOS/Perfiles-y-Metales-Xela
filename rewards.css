@@ -575,19 +575,21 @@ main,
     }
 }
 
+@media (max-width: 768px) {
+    .hero-copy .rewards-page-title {
+        max-width: min(100%, 350px);
+        font-size: clamp(27px, 8vw, 34px);
+        line-height: 1.1;
+        overflow-wrap: break-word;
+        text-wrap: balance;
+    }
+}
+
 @media (max-width: 520px) {
     .nav-shell,
     main,
     .site-footer {
         width: min(100% - 22px, 1160px);
-    }
-
-    .hero-copy .rewards-page-title {
-        max-width: min(100%, 340px);
-        font-size: clamp(30px, 9vw, 38px);
-        line-height: 0.98;
-        overflow-wrap: anywhere;
-        text-wrap: balance;
     }
 
     .brand span {
@@ -604,14 +606,16 @@ main,
         font-size: 10px;
     }
 
-    .hero-copy .rewards-page-title {
-        max-width: min(100%, 300px);
-        font-size: 28px;
-    }
-
     .hero-actions a,
     .bobby-section .primary-button {
         width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-copy .rewards-page-title {
+        max-width: min(100%, 310px);
+        font-size: 26px;
     }
 }
 /* =========================
