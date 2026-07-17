@@ -73,10 +73,12 @@ text-transform:uppercase;
 letter-spacing:2px;
 }
 
-.products-hero h1{
-font-size:4rem;
+.products-hero .products-page-title{
+display:block;
 margin:15px 0;
+font-size:4rem;
 font-weight:800;
+text-align:center;
 }
 
 .products-hero strong{
@@ -281,8 +283,12 @@ display:none;
 padding:60px 20px;
 }
 
-.products-hero h1{
-font-size:2.6rem;
+.products-hero .products-page-title{
+margin:15px auto 0;
+max-width:min(100%, 360px);
+padding:0 12px;
+font-size:clamp(26px, 8vw, 34px);
+line-height:1.1;
 }
 
 .products-grid{
@@ -306,6 +312,13 @@ font-size:2.2rem;
 font-size:2.2rem;
 }
 
+}
+
+@media (max-width: 380px) {
+    .products-hero .products-page-title {
+        max-width: min(100%, 310px);
+        font-size: 26px;
+    }
 }
 
 .mobile-menu-btn,

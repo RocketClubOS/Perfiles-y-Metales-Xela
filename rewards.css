@@ -141,7 +141,7 @@ main,
     text-transform: uppercase;
 }
 
-.hero-copy h1 {
+.hero-copy .rewards-page-title {
     margin: 0;
     color: var(--blue);
     font-family: 'Bebas Neue', sans-serif;
@@ -582,6 +582,14 @@ main,
         width: min(100% - 22px, 1160px);
     }
 
+    .hero-copy .rewards-page-title {
+        max-width: min(100%, 340px);
+        font-size: clamp(30px, 9vw, 38px);
+        line-height: 0.98;
+        overflow-wrap: anywhere;
+        text-wrap: balance;
+    }
+
     .brand span {
         font-size: 10px;
     }
@@ -594,6 +602,11 @@ main,
         min-height: 42px;
         padding: 0 10px;
         font-size: 10px;
+    }
+
+    .hero-copy .rewards-page-title {
+        max-width: min(100%, 300px);
+        font-size: 28px;
     }
 
     .hero-actions a,
