@@ -30,6 +30,15 @@ padding:18px 30px;
 height:55px;
 }
 
+.products-logo h1{
+color:#fff;
+font-size:clamp(22px, 2.3vw, 34px);
+}
+
+.products-logo span{
+color:#ffb800;
+}
+
 .products-menu{
 display:flex;
 gap:30px;
@@ -261,6 +270,14 @@ margin:8px 0;
 MOBILE
 ======================================== */
 
+@media(max-width:1200px){
+
+.products-logo h1{
+font-size:clamp(22px, 3.2vw, 30px);
+}
+
+}
+
 @media(max-width:768px){
 
 .products-header{
@@ -273,6 +290,10 @@ display:none;
 
 .products-logo img{
 height:45px;
+}
+
+.products-logo h1{
+font-size:clamp(22px, 5.6vw, 28px);
 }
 
 .products-whatsapp{
@@ -318,6 +339,10 @@ font-size:2.2rem;
 }
 
 @media (max-width: 380px) {
+    .products-logo h1 {
+        font-size: 22px;
+    }
+
     .products-hero .products-page-title {
         max-width: min(100%, 310px);
         font-size: 26px;

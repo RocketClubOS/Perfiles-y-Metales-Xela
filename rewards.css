@@ -731,6 +731,19 @@ main,
 }
 
 @media (max-width: 768px) {
+    .site-header .brand span,
+    .site-header .brand strong {
+        font-size: clamp(22px, 5.6vw, 28px);
+    }
+
+    .site-header .brand span {
+        color: #fff;
+    }
+
+    .site-header .brand strong {
+        color: #ffb800;
+    }
+
     .main-menu,
     .nav-links,
     .desktop-nav,
@@ -788,5 +801,12 @@ main,
         border-radius: 14px;
         text-align: center;
         margin-top: 8px;
+    }
+}
+
+@media (max-width: 380px) {
+    .site-header .brand span,
+    .site-header .brand strong {
+        font-size: 22px;
     }
 }
