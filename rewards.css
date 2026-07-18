@@ -749,7 +749,7 @@ main,
     }
 
     .site-header .brand {
-        white-space: nowrap;
+        min-width: 0;
     }
 
     .site-header .brand h1 {
@@ -775,6 +775,7 @@ main,
 
     .mobile-menu-btn {
         display: block;
+        flex-shrink: 0;
         background: #ffc400;
         color: #050505;
         border: none;
