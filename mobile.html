@@ -202,7 +202,27 @@
             </div>
 
             <div class="mobile-location-image">
-                <img src="images/store.jpg" alt="Local Perfiles y Metales Xela">
+                <img src="images/store.jpg" alt="Fachada de Perfiles y Metales Xela" width="747" height="812">
+            </div>
+
+            <div class="location-gallery mobile-location-gallery" aria-labelledby="mobile-location-gallery-title">
+                <div class="location-gallery-heading">
+                    <h3 id="mobile-location-gallery-title">CONOCÉ NUESTRO LOCAL</h3>
+                    <p>Deslizá para descubrir más <span class="gallery-arrow" aria-hidden="true">→</span></p>
+                </div>
+
+                <div class="location-gallery-track" role="list" aria-label="Fotos de nuestro local y productos">
+                    <button class="location-gallery-item" type="button" role="listitem" data-gallery-item aria-label="Ampliar foto del exterior del local"><img src="images/gallery-exterior.jpg" alt="Exterior de Perfiles y Metales Xela" width="1200" height="720" loading="lazy" decoding="async"><span>Exterior</span></button>
+                    <button class="location-gallery-item" type="button" role="listitem" data-gallery-item aria-label="Ampliar foto del interior del local"><img src="images/merca.jpg" alt="Inventario de perfiles, tubos y ángulos en el interior del local" width="1536" height="2048" loading="lazy" decoding="async"><span>Interior</span></button>
+                    <button class="location-gallery-item is-poster" type="button" role="listitem" data-gallery-item aria-label="Ampliar imagen del inventario"><img src="images/convo constructor imange.jpg" alt="Combo constructor con láminas, tubos y perfiles disponibles" width="1122" height="1402" loading="lazy" decoding="async"><span>Inventario</span></button>
+                    <button class="location-gallery-item" type="button" role="listitem" data-gallery-item aria-label="Ampliar foto de tubos"><img src="images/tubossss.jpg" alt="Tubos redondos, cuadrados y rectangulares disponibles en el local" width="1536" height="2048" loading="lazy" decoding="async"><span>Tubos</span></button>
+                    <button class="location-gallery-item is-poster" type="button" role="listitem" data-gallery-item aria-label="Ampliar catálogo de láminas"><img src="images/puertas2.jpg" alt="Catálogo de láminas lisas y estampadas para puertas" width="2048" height="2048" loading="lazy" decoding="async"><span>Láminas</span></button>
+                    <button class="location-gallery-item is-poster" type="button" role="listitem" data-gallery-item aria-label="Ampliar imagen de perfiles para herrería"><img src="images/ganas mas como herrero.jpg" alt="Perfiles rectos y material para trabajos de herrería" width="1024" height="1024" loading="lazy" decoding="async"><span>Perfiles</span></button>
+                    <button class="location-gallery-item is-poster" type="button" role="listitem" data-gallery-item aria-label="Ampliar catálogo de puertas"><img src="images/puertas anuncio.jpg" alt="Catálogo de puertas metálicas disponibles en Xela" width="1024" height="1536" loading="lazy" decoding="async"><span>Puertas</span></button>
+                    <button class="location-gallery-item" type="button" role="listitem" data-gallery-item aria-label="Ampliar foto de portones"><img src="images/gallery-portones.jpg" alt="Portones de metal fabricados en Xela" width="1200" height="720" loading="lazy" decoding="async"><span>Portones</span></button>
+                    <button class="location-gallery-item is-poster" type="button" role="listitem" data-gallery-item aria-label="Ampliar imagen de forjados"><img src="images/forjas.jpg" alt="Piñas de hierro forjado para diseños metálicos" width="2048" height="2048" loading="lazy" decoding="async"><span>Forjados</span></button>
+                    <button class="location-gallery-item is-poster" type="button" role="listitem" data-gallery-item aria-label="Ampliar imagen de galeras"><img src="images/galera.jpg" alt="Ejemplo de galera construida con estructura y lámina metálica" width="1254" height="1254" loading="lazy" decoding="async"><span>Galeras</span></button>
+                </div>
             </div>
 
         </section>
@@ -232,6 +252,16 @@
             <input id="chatInput" type="text" placeholder="Escribí tu pregunta...">
             <button id="sendChat" type="button">Enviar</button>
         </div>
+    </div>
+
+    <div class="gallery-lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Visor de fotos" aria-hidden="true">
+        <button class="gallery-lightbox-close" type="button" aria-label="Cerrar visor">×</button>
+        <button class="gallery-lightbox-nav gallery-lightbox-prev" type="button" aria-label="Foto anterior">‹</button>
+        <figure class="gallery-lightbox-content">
+            <img alt="" width="1200" height="720">
+            <figcaption aria-live="polite"></figcaption>
+        </figure>
+        <button class="gallery-lightbox-nav gallery-lightbox-next" type="button" aria-label="Foto siguiente">›</button>
     </div>
 
     <script>
