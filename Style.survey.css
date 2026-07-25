@@ -214,7 +214,10 @@ button:hover {
   margin:0;
   color:#fff;
   display:block;
-  max-width: min(100%, 320px);
+  max-width: min(100%, 420px);
+  line-height:1.05;
+  text-wrap:balance;
+  overflow-wrap:anywhere;
   font-size:clamp(22px, 2.3vw, 34px);
   font-weight:900;
   letter-spacing:1px;
@@ -348,7 +351,7 @@ button:hover {
 
     .survey-logo .survey-title {
         max-width: min(100%, 240px);
-        font-size: clamp(22px, 5.6vw, 28px);
+        font-size: clamp(20px, 5.2vw, 26px);
         line-height: 1.08;
     }
 
@@ -424,6 +427,6 @@ button:hover {
 @media (max-width: 380px) {
     .survey-logo .survey-title {
         max-width: 100%;
-        font-size: 22px;
+        font-size: 20px;
     }
 }
