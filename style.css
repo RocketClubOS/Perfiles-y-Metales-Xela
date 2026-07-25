@@ -41,11 +41,9 @@ body{
 }
 
 .logo h1{
-    max-width:320px;
-    font-size:clamp(20px, 2vw, 24px);
+    font-size:24px;
     font-weight:700;
     line-height:1.1;
-    text-wrap:balance;
 }
 
 .logo span{
@@ -311,10 +309,9 @@ body{
 
 .location-info h2{
     font-family:'Bebas Neue', sans-serif;
-    font-size:clamp(42px, 4.2vw, 52px);
+    font-size:52px;
     line-height:0.95;
     margin-bottom:20px;
-    overflow-wrap:anywhere;
 }
 
 .location-info span{
@@ -326,7 +323,6 @@ body{
     font-size:18px;
     line-height:1.6;
     margin-bottom:25px;
-    overflow-wrap:anywhere;
 }
 
 .map-btn{
@@ -585,10 +581,8 @@ body{
 .mobile-logo-text h2{
     margin:0;
     line-height:0.9;
-    max-width:125px;
-    font-size:clamp(16px, 4.6vw, 18px);
+    font-size:18px;
     font-weight:800;
-    text-wrap:balance;
 }
 
 .mobile-logo-text span{
@@ -1008,7 +1002,6 @@ body{
     letter-spacing:1px;
 
     color:white;
-    overflow-wrap:anywhere;
 }
 
 .mobile-location-text h2 span{
@@ -1020,7 +1013,6 @@ body{
     font-size:15px;
     line-height:1.6;
     margin-bottom:20px;
-    overflow-wrap:anywhere;
 }
 
 .mobile-map-btn{

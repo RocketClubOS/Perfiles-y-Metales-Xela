@@ -33,10 +33,6 @@ height:55px;
 .products-logo h1{
 color:#fff;
 font-size:clamp(22px, 2.3vw, 34px);
-line-height:1.05;
-max-width:420px;
-text-wrap:balance;
-overflow-wrap:anywhere;
 }
 
 .products-logo span{
@@ -263,13 +259,11 @@ border-top:1px solid rgba(255,193,7,.1);
 
 .products-footer h3{
 margin-bottom:15px;
-overflow-wrap:anywhere;
 }
 
 .products-footer p{
 color:#999;
 margin:8px 0;
-overflow-wrap:anywhere;
 }
 
 /* ========================================
@@ -346,7 +340,7 @@ font-size:2.2rem;
 
 @media (max-width: 380px) {
     .products-logo h1 {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .products-hero .products-page-title {
