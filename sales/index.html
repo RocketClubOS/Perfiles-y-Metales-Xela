@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Sales Point | Perfiles y Metales Xela</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sales.css">
+</head>
+<body>
+    <header class="sales-header">
+        <div>
+            <span class="brand-mark">PMX</span>
+            <div><strong>Sales Point</strong><small>Perfiles y Metales Xela</small></div>
+        </div>
+        <div class="employee-box">
+            <span id="employeeName">Cargando...</span>
+            <small id="employeeId"></small>
+            <button class="link-button" id="logoutButton">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <main class="sales-shell">
+        <div class="program-status" id="programStatus">Consultando estado...</div>
+
+        <section class="step-card">
+            <span class="step-number">1</span>
+            <div class="step-content">
+                <h1>Buscar cliente</h1>
+                <form class="inline-form" id="searchForm">
+                    <label>Teléfono
+                        <input name="telefono" type="tel" inputmode="tel"
+                               autocomplete="off" placeholder="+502 5555-1234" required>
+                    </label>
+                    <button type="submit">Buscar cliente</button>
+                </form>
+                <p class="message" id="searchMessage" aria-live="polite"></p>
+                <article class="customer-card is-hidden" id="customerCard">
+                    <div><small>Cliente</small><strong id="customerName"></strong></div>
+                    <div><small>Teléfono</small><strong id="customerPhone"></strong></div>
+                    <div><small>Estado</small><strong id="customerStatus"></strong></div>
+                    <div class="balance"><small>Saldo</small><strong id="customerBalance"></strong></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="step-card is-disabled" id="operationSection">
+            <span class="step-number">2</span>
+            <div class="step-content">
+                <h2>Seleccionar operación</h2>
+                <div class="operation-tabs">
+                    <button class="tab is-active" data-tab="purchase" type="button">Registrar compra</button>
+                    <button class="tab" data-tab="redeem" type="button">Canjear puntos</button>
+                </div>
+
+                <form id="purchaseForm" class="operation-form">
+                    <label>Número de factura
+                        <input name="invoice" required maxlength="80">
+                    </label>
+                    <label>Monto total (Q)
+                        <input name="amount" type="number" min="0.01" step="0.01" required>
+                    </label>
+                    <button class="secondary" id="previewButton" type="button">Calcular puntos</button>
+                    <div class="preview is-hidden" id="purchasePreview"></div>
+                    <button type="submit">Registrar compra</button>
+                    <p class="message" id="purchaseMessage" aria-live="polite"></p>
+                </form>
+
+                <form id="redeemForm" class="operation-form is-hidden">
+                    <label>Número de factura
+                        <input name="invoice" required maxlength="80">
+                    </label>
+                    <label>Puntos a canjear
+                        <input name="points" type="number" min="1" step="1" required>
+                    </label>
+                    <button type="submit">Canjear puntos</button>
+                    <p class="message" id="redeemMessage" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+        <section class="step-card">
+            <span class="step-number">3</span>
+            <div class="step-content">
+                <div class="section-title">
+                    <h2>Mis operaciones recientes</h2>
+                    <button class="link-button" id="refreshHistory">Actualizar</button>
+                </div>
+                <div class="history-list" id="historyList">Cargando operaciones...</div>
+            </div>
+        </section>
+    </main>
+    <script src="sales.js"></script>
+</body>
+</html>
