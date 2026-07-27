@@ -261,9 +261,13 @@
     </footer>
 
     <script>
-        const API_BASE_URL = "https://perfiles-y-metales-xela-backend.onrender.com";
+        const API_BASE_URL = ["localhost", "127.0.0.1"].includes(window.location.hostname)
+            ? "http://localhost:5000"
+            : "https://perfiles-y-metales-xela-backend.onrender.com";
         const clubForm = document.querySelector("#clubForm");
+        const saldoForm = document.querySelector("#saldoForm");
         const clubMessage = document.querySelector("#clubSuccess");
+        const saldoResult = document.querySelector("#saldoResult");
         const welcomePanel = document.querySelector("#welcomePanel");
         const welcomeName = document.querySelector("#welcomeName");
         const welcomePhone = document.querySelector("#welcomePhone");
@@ -316,7 +320,7 @@
                 try {
                     setMessage(clubMessage, "Guardando afiliacion...");
 
-                    await parseJsonResponse(await fetch(`${API_BASE_URL}/api/rewards/enroll`, {
+                    const data = await parseJsonResponse(await fetch(`${API_BASE_URL}/api/rewards/enroll`, {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
@@ -324,7 +328,15 @@
                         body: JSON.stringify(payload),
                     }));
 
-                    setMessage(clubMessage, "Afiliacion guardada correctamente.");
+                    if (!data.welcome_points_added) {
+                        setMessage(
+                            clubMessage,
+                            data.message || "El cliente ya estaba registrado."
+                        );
+                        return;
+                    }
+
+                    setMessage(clubMessage, data.message);
 
                     if (welcomePanel) {
                         welcomePanel.classList.remove("is-hidden");
@@ -334,12 +346,58 @@
                     if (welcomePhone) welcomePhone.textContent = payload.telefono || "-";
                     if (welcomeType) welcomeType.textContent = payload.tipo_cliente || "-";
                     if (welcomeCity) welcomeCity.textContent = payload.ciudad || "-";
-                    if (welcomeBalance) welcomeBalance.textContent = formatCurrency(5);
+                    if (welcomeBalance) {
+                        welcomeBalance.textContent = `${data.welcome_points} puntos`;
+                    }
 
                     clubForm.reset();
                 } catch (error) {
                     setMessage(clubMessage, error.message || "No se pudo guardar la afiliacion.", true);
                     alert(error.message || "No se pudo guardar la afiliacion.");
+                }
+            });
+        }
+
+        if (saldoForm) {
+            saldoForm.addEventListener("submit", async (event) => {
+                event.preventDefault();
+
+                if (!saldoForm.checkValidity()) {
+                    saldoForm.reportValidity();
+                    return;
+                }
+
+                const formData = new FormData(saldoForm);
+                const telefono = String(formData.get("telefono") || "").trim();
+
+                if (!telefono) {
+                    setMessage(saldoResult, "El numero de telefono es obligatorio.", true);
+                    return;
+                }
+
+                try {
+                    setMessage(saldoResult, "Consultando saldo...");
+                    const data = await parseJsonResponse(await fetch(
+                        `${API_BASE_URL}/api/rewards/balance`,
+                        {
+                            method: "POST",
+                            headers: {"Content-Type": "application/json"},
+                            body: JSON.stringify({telefono}),
+                        }
+                    ));
+                    const points = Number(data.saldo || 0);
+                    setMessage(
+                        saldoResult,
+                        points === 0
+                            ? "Tu saldo disponible es de 0 puntos."
+                            : `Tu saldo disponible es de ${points} puntos.`
+                    );
+                } catch (error) {
+                    setMessage(
+                        saldoResult,
+                        error.message || "Error de conexion al consultar el saldo.",
+                        true
+                    );
                 }
             });
         }
