@@ -39,7 +39,12 @@ function convertirLinks(text) {
     const urlRegex = /(https?:\/\/[^\s]+)/g;
 
     return text.replace(urlRegex, function(url) {
-        return `<a href="${url}" target="_blank" rel="noopener noreferrer">📍 Abrir Google Maps</a>`;
+        const isWhatsApp = url.includes("wa.me/");
+        const label = isWhatsApp
+            ? "💬 Escribir por WhatsApp"
+            : "📍 Abrir Google Maps";
+
+        return `<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
     });
 }
 
