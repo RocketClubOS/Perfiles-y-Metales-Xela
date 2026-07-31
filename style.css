@@ -2362,3 +2362,14 @@ body.gallery-modal-open{
     .gallery-lightbox,
     .gallery-lightbox button{ transition:none; }
 }
+/* Enlaces legales aditivos; conserva la identidad visual existente. */
+.legal-footer {
+    padding: 1rem;
+    text-align: center;
+    background: #111827;
+    color: #fff;
+}
+.legal-footer a {
+    color: #fff;
+    margin: 0 .5rem;
+}
