@@ -1,0 +1,17 @@
+:root { color-scheme: light; --ink: #172033; --muted: #5b6472; --brand: #bd1e2d; --line: #dfe3e8; }
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); background: #f7f8fa; font-family: Arial, sans-serif; line-height: 1.65; }
+.legal-header { background: #111827; color: white; padding: 1rem; }
+.legal-header nav, .legal-main, .legal-footer { width: min(920px, calc(100% - 2rem)); margin: auto; }
+.legal-header a { color: white; text-decoration: none; margin-right: 1rem; }
+.legal-main { background: white; margin-top: 2rem; margin-bottom: 2rem; padding: clamp(1.25rem, 4vw, 3rem); border: 1px solid var(--line); border-radius: 12px; }
+h1, h2 { line-height: 1.2; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h2 { margin-top: 2rem; }
+.meta { color: var(--muted); }
+.notice { border-left: 4px solid var(--brand); background: #fff7f7; padding: 1rem; }
+label { display: block; margin: 1rem 0; font-weight: 700; }
+input, select, button { width: 100%; margin-top: .35rem; padding: .8rem; font: inherit; }
+button { border: 0; border-radius: 6px; color: white; background: var(--brand); font-weight: 700; cursor: pointer; }
+.legal-footer { padding: 1rem 0 2rem; }
+.legal-footer a { color: var(--ink); margin-right: 1rem; }

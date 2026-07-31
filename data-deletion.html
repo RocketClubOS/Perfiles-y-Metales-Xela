@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Eliminación de datos | Perfiles y Metales Xela</title><link rel="stylesheet" href="legal.css"></head>
+<body><header class="legal-header"><nav><a href="index.html">Perfiles y Metales Xela</a><a href="privacy.html">Privacidad</a></nav></header>
+<main class="legal-main">
+<h1>Solicitud de eliminación de datos</h1><p class="meta">Vigente y actualizado: 31 de julio de 2026.</p>
+<p>Puedes solicitar la eliminación o anonimización de datos asociados al Club Xela, encuestas, chat o Messenger. La respuesta no confirmará si existe una cuenta. Antes de borrar, verificaremos razonablemente tu identidad por el medio proporcionado.</p>
+<form id="deletion-form">
+<label>Medio de identificación<select name="contact_type" required><option value="phone">Teléfono o WhatsApp</option><option value="email">Correo electrónico</option><option value="meta">Identificador o perfil de Meta</option></select></label>
+<label>Dato de contacto<input name="contact_value" maxlength="254" required autocomplete="email"></label>
+<button type="submit">Enviar solicitud</button>
+</form>
+<p id="result" role="status" aria-live="polite"></p>
+<h2>Qué ocurrirá</h2><p>La solicitud inicia en <strong>IDENTITY_PENDING</strong>. Tras verificar identidad puede pasar a PROCESSING y COMPLETED, o REJECTED si no puede validarse o existe una obligación legítima de conservación. El equipo deberá eliminar o anonimizar los datos aplicables en Google Sheets, registros operativos, Messenger y otros sistemas confirmados.</p>
+<h2>Backups y registros</h2><p>Los datos se eliminan o anonimizan en un máximo de 30 días tras validar la solicitud. Los backups diarios se conservan 30 días, los semanales 3 meses y los mensuales 12 meses. Los datos se eliminan de backups cuando sea técnicamente posible o quedan fuera del uso operativo hasta su expiración automática. Conservamos sólo una constancia mínima de la solicitud, sin mantener innecesariamente los datos eliminados.</p>
+</main>
+<footer class="legal-footer"><a href="privacy.html">Privacidad</a><a href="terms.html">Términos</a><a href="contact.html">Contacto</a></footer>
+<script>
+document.getElementById("deletion-form").addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const result = document.getElementById("result");
+  const data = Object.fromEntries(new FormData(event.currentTarget));
+  result.textContent = "Enviando...";
+  try {
+    const response = await fetch("https://perfiles-y-metales-xela-backend.onrender.com/api/data-deletion/requests", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(data)});
+    const payload = await response.json();
+    if (!response.ok) throw new Error(payload.message || "No se pudo enviar.");
+    result.textContent = `${payload.message} Código: ${payload.confirmation_code}. Estado: ${payload.status}. Guarda este código.`;
+    event.currentTarget.reset();
+  } catch (error) { result.textContent = error.message; }
+});
+</script></body></html>
