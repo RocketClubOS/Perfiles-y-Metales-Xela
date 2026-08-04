@@ -892,6 +892,29 @@ main,
         border-radius: 24px;
     }
 
+    .saldo-card {
+        min-height: 258px;
+        padding: 24px;
+        border-radius: 22px;
+    }
+
+    .saldo-card__topline {
+        margin-bottom: 14px;
+    }
+
+    .saldo-card strong {
+        font-size: clamp(58px, 18vw, 76px);
+    }
+
+    .saldo-card > p {
+        margin: 10px 0 20px;
+        font-size: 13px;
+    }
+
+    .saldo-card__footer {
+        padding-top: 12px;
+    }
+
     .hero-copy .rewards-page-title {
         max-width: 520px;
         font-size: clamp(48px, 14vw, 72px);
