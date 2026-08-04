@@ -134,13 +134,70 @@ main,
     color: var(--blue);
 }
 
-.hero-section {
+.hero-layout {
     display: grid;
     grid-template-columns: 1fr;
     gap: 24px;
     align-items: center;
-    min-height: calc(100vh - 70px);
-    padding: 46px 0;
+    margin-top: 22px;
+}
+
+.hero-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(30px, 5vw, 68px);
+    align-items: center;
+    min-height: min(720px, calc(100vh - 92px));
+    margin-top: 0;
+    padding: clamp(42px, 7vw, 82px) clamp(24px, 6vw, 72px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 32px;
+    background:
+        radial-gradient(circle at 8% 18%, rgba(255, 212, 0, 0.14), transparent 24%),
+        radial-gradient(circle at 92% 82%, rgba(68, 111, 223, 0.2), transparent 32%),
+        linear-gradient(135deg, #071738 0%, #102b69 52%, #091b43 100%);
+    box-shadow: 0 30px 80px rgba(7, 23, 56, 0.2);
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: 0.18;
+    background-image:
+        linear-gradient(120deg, transparent 47%, rgba(255, 255, 255, 0.08) 48%, transparent 49%),
+        linear-gradient(60deg, transparent 47%, rgba(255, 255, 255, 0.05) 48%, transparent 49%);
+    background-size: 64px 110px;
+    mask-image: linear-gradient(to right, transparent, #000 45%, #000);
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0 0 20px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.hero-kicker > span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--yellow);
+    box-shadow: 0 0 0 5px rgba(255, 212, 0, 0.12), 0 0 18px rgba(255, 212, 0, 0.5);
 }
 
 .eyebrow,
@@ -155,73 +212,290 @@ main,
 
 .hero-copy .rewards-page-title {
     margin: 0;
-    color: var(--blue);
+    max-width: 660px;
+    color: var(--white);
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(56px, 15vw, 112px);
-    line-height: 0.88;
-    letter-spacing: 0;
+    font-size: clamp(62px, 8.2vw, 108px);
+    font-weight: 400;
+    line-height: 0.86;
+    letter-spacing: 0.01em;
     text-transform: uppercase;
+    text-wrap: balance;
 }
 
-.hero-slogan {
-    margin: 16px 0 0;
-    color: var(--black);
-    font-size: clamp(24px, 7vw, 42px);
-    font-weight: 900;
+.hero-copy .rewards-page-title span {
+    display: block;
+    color: var(--yellow);
+    text-shadow: 0 7px 28px rgba(255, 212, 0, 0.16);
 }
 
 .hero-text {
-    max-width: 620px;
-    margin: 16px 0 0;
-    color: var(--text-muted);
-    font-size: 17px;
+    max-width: 590px;
+    margin: 24px 0 0;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: clamp(15px, 1.6vw, 18px);
     line-height: 1.6;
-    font-weight: 650;
+    font-weight: 550;
+}
+
+.hero-text strong {
+    color: var(--white);
+    font-weight: 850;
+    white-space: nowrap;
 }
 
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    margin-top: 26px;
+    margin-top: 30px;
+}
+
+.hero-actions .primary-button,
+.hero-actions .secondary-button {
+    min-height: 52px;
+    padding: 0 22px;
+    border-radius: 12px;
+    font-size: 11px;
+    letter-spacing: 0.035em;
+    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.hero-actions .primary-button:hover,
+.hero-actions .secondary-button:hover {
+    transform: translateY(-2px);
+}
+
+.hero-actions .primary-button:hover {
+    box-shadow: 0 16px 32px rgba(255, 212, 0, 0.32);
+}
+
+.hero-actions .secondary-button {
+    border-color: rgba(255, 255, 255, 0.24);
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--white);
+    backdrop-filter: blur(8px);
+}
+
+.hero-actions .secondary-button:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+    margin: 28px 0 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 10px;
+    font-weight: 750;
+    letter-spacing: 0.02em;
+    list-style: none;
+}
+
+.hero-trust li {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.hero-trust li span {
+    display: inline-grid;
+    width: 18px;
+    height: 18px;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(255, 212, 0, 0.12);
+    color: var(--yellow);
+    font-size: 11px;
 }
 
 .saldo-card {
     position: relative;
+    isolation: isolate;
+    min-height: 315px;
     overflow: hidden;
-    padding: 24px;
-    border-radius: 8px;
-    background: linear-gradient(135deg, var(--yellow), #ffe96b);
-    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(28px, 5vw, 44px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 82% 18%, rgba(255, 212, 0, 0.2), transparent 28%),
+        linear-gradient(145deg, #17377f 0%, #0b1f50 58%, #071638 100%);
+    color: var(--white);
+    box-shadow:
+        0 28px 55px rgba(8, 24, 61, 0.28),
+        0 8px 18px rgba(8, 24, 61, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    transform: translateZ(0);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.saldo-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 34px 65px rgba(8, 24, 61, 0.34),
+        0 10px 22px rgba(8, 24, 61, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.24);
+}
+
+.saldo-card::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 20%, rgba(255, 255, 255, 0.12) 43%, transparent 58%);
+    transform: translateX(-110%);
+    animation: saldo-card-shine 7s ease-in-out infinite;
 }
 
 .saldo-card::after {
     content: "";
     position: absolute;
-    width: 190px;
-    height: 190px;
-    right: -80px;
-    bottom: -90px;
-    border: 28px solid rgba(29, 63, 149, 0.16);
+    z-index: -1;
+    width: 270px;
+    height: 270px;
+    right: -115px;
+    bottom: -145px;
+    border: 42px solid rgba(255, 212, 0, 0.1);
     border-radius: 50%;
 }
 
-.saldo-card span,
-.saldo-card p {
+.saldo-card__glow {
+    position: absolute;
+    z-index: -1;
+    width: 180px;
+    height: 180px;
+    top: -90px;
+    left: -65px;
+    border-radius: 50%;
+    background: rgba(255, 212, 0, 0.16);
+    filter: blur(3px);
+}
+
+.saldo-card__topline,
+.saldo-card__footer {
     position: relative;
     z-index: 1;
-    margin: 0;
-    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.saldo-card__topline {
+    margin-bottom: 18px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.saldo-card__badge {
+    flex: 0 0 auto;
+    padding: 7px 10px;
+    border: 1px solid rgba(255, 212, 0, 0.38);
+    border-radius: 999px;
+    background: rgba(255, 212, 0, 0.09);
+    color: var(--yellow);
+    font-size: 10px;
+    letter-spacing: 0.12em;
 }
 
 .saldo-card strong {
     position: relative;
     z-index: 1;
     display: block;
-    margin: 12px 0;
-    color: var(--blue);
-    font-size: clamp(48px, 15vw, 78px);
-    line-height: 1;
+    margin: 0;
+    color: var(--yellow);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(68px, 10vw, 104px);
+    font-weight: 400;
+    letter-spacing: 0.015em;
+    line-height: 0.9;
+    text-shadow: 0 5px 24px rgba(255, 212, 0, 0.18);
+}
+
+.saldo-card > p {
+    position: relative;
+    z-index: 1;
+    max-width: 360px;
+    margin: 14px 0 30px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.saldo-card__footer {
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.13);
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.saldo-card__footer > span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.saldo-card__chip {
+    width: 38px;
+    height: 28px;
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 7px;
+    background: linear-gradient(145deg, #e4ba30, #8c6a0e);
+}
+
+.saldo-card__chip i {
+    display: block;
+    height: 1px;
+    margin: 3px 0;
+    background: rgba(51, 38, 2, 0.45);
+}
+
+.saldo-card__status {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #55db8a;
+    box-shadow: 0 0 0 4px rgba(85, 219, 138, 0.12);
+}
+
+.saldo-card.is-personal {
+    border-color: rgba(255, 212, 0, 0.38);
+}
+
+.saldo-card.is-loading strong {
+    animation: saldo-card-pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes saldo-card-shine {
+    0%, 72% { transform: translateX(-110%); }
+    88%, 100% { transform: translateX(115%); }
+}
+
+@keyframes saldo-card-pulse {
+    from { opacity: 0.45; }
+    to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .saldo-card,
+    .saldo-card::before,
+    .saldo-card.is-loading strong {
+        animation: none;
+        transition: none;
+    }
 }
 
 .forms-grid,
@@ -567,7 +841,7 @@ main,
         display: flex;
     }
 
-    .hero-section,
+    .hero-layout,
     .forms-grid {
         grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
     }
@@ -588,12 +862,27 @@ main,
 }
 
 @media (max-width: 768px) {
+    .hero-layout {
+        margin-top: 14px;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding: 38px 24px 30px;
+        border-radius: 24px;
+    }
+
     .hero-copy .rewards-page-title {
-        max-width: min(100%, 350px);
-        font-size: clamp(27px, 8vw, 34px);
-        line-height: 1.1;
+        max-width: 520px;
+        font-size: clamp(48px, 14vw, 72px);
+        line-height: 0.9;
         overflow-wrap: break-word;
         text-wrap: balance;
+    }
+
+    .hero-trust {
+        display: grid;
+        gap: 10px;
     }
 }
 
@@ -626,8 +915,7 @@ main,
 
 @media (max-width: 380px) {
     .hero-copy .rewards-page-title {
-        max-width: min(100%, 310px);
-        font-size: 26px;
+        font-size: 45px;
     }
 }
 /* =========================

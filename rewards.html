@@ -36,36 +36,50 @@
                 <a href="productos.html">Productos</a>
                 <a href="encuesta.html">Encuesta</a>
                 <a href="rewards.html">Recompensas</a>
-                <a href="https://wa.me/50248649231" target="_blank">WhatsApp</a>
+                <a href="https://wa.me/50248649231" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </nav>
 
-            <a class="whatsapp-link" href="https://wa.me/50248649231" target="_blank" rel="noopener">
+            <a class="whatsapp-link" href="https://wa.me/50248649231" target="_blank" rel="noopener noreferrer">
                 WhatsApp 4864-9231
             </a>
         </nav>
     </header>
 
     <main>
-        <section class="hero-section">
-            <div class="hero-copy">
-                <p class="eyebrow">Club Xela</p>
-                <h1 class="rewards-page-title">Afiliate Gratis y Empezá a Ahorrar</h1>
-                <p class="hero-slogan">Comprá Más. Ahorrá Más.</p>
-                <p class="hero-text">
-                    Registrate con tu WhatsApp, consultá tu saldo disponible y recibí beneficios exclusivos en Perfiles y Metales Xela.
-                </p>
-                <div class="hero-actions">
-                    <a class="primary-button" href="#afiliacion">Afiliarme Gratis</a>
-                    <a class="secondary-button" href="#saldo">Consultar Saldo</a>
+        <div class="hero-layout">
+            <section class="hero-section">
+                <div class="hero-copy">
+                    <p class="hero-kicker"><span aria-hidden="true"></span> Club Xela · Programa de beneficios</p>
+                    <h1 class="rewards-page-title">Tus compras <span>ahora te dan más</span></h1>
+                    <p class="hero-text">
+                        Afiliate gratis, recibí <strong>Q5 de bienvenida</strong> y acumulá saldo para ahorrar en tus próximas compras.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="primary-button" href="#afiliacion">Afiliarme y recibir Q5</a>
+                        <a class="secondary-button" href="#saldoForm">Consultar mi saldo</a>
+                    </div>
+                    <ul class="hero-trust" aria-label="Beneficios de Club Xela">
+                        <li><span aria-hidden="true">✓</span> Afiliación gratuita</li>
+                        <li><span aria-hidden="true">✓</span> Beneficios por compra</li>
+                        <li><span aria-hidden="true">✓</span> Consulta por WhatsApp</li>
+                    </ul>
                 </div>
-            </div>
+            </section>
 
-            <aside class="saldo-card" aria-label="Ejemplo de saldo disponible">
-                <span>Tu Saldo Disponible</span>
-                <strong>Q125.00</strong>
-                <p>Disponible para descuento en futuras compras</p>
+            <aside class="saldo-card" id="saldoCard" aria-label="Ejemplo de saldo acumulado" aria-live="polite">
+                <div class="saldo-card__glow" aria-hidden="true"></div>
+                <div class="saldo-card__topline">
+                    <span id="saldoCardLabel">Ejemplo de saldo acumulado</span>
+                    <span class="saldo-card__badge">CLUB XELA</span>
+                </div>
+                <strong id="saldoCardAmount">Q125.00</strong>
+                <p id="saldoCardMessage">Comprá, acumulá y usalo como descuento</p>
+                <div class="saldo-card__footer" aria-hidden="true">
+                    <span class="saldo-card__chip"><i></i><i></i><i></i></span>
+                    <span><i class="saldo-card__status"></i> Beneficio activo</span>
+                </div>
             </aside>
-        </section>
+        </div>
 
         <section class="forms-grid" id="afiliacion">
             <form class="panel-form" id="clubForm">
@@ -98,16 +112,13 @@
                     Tipo de cliente
                     <select name="tipo_cliente" required>
                         <option value="">Seleccioná una opción</option>
+                        <option>Particular</option>
                         <option>Herrero</option>
                         <option>Constructor</option>
                         <option>Hogar</option>
                         <option>Empresa</option>
+                        <option>Ferretería</option>
                     </select>
-                </label>
-
-                <label>
-                    Fecha de nacimiento
-                    <input name="fecha_nacimiento" type="date">
                 </label>
 
                 <button type="submit">Afiliarme Gratis</button>
@@ -234,7 +245,7 @@
                 <h2>Preguntale a Bobby por productos, promociones y saldo disponible</h2>
                 <p>Te ayudamos con medidas, disponibilidad, ofertas y dudas sobre Club Xela.</p>
             </div>
-            <a class="primary-button" href="https://wa.me/50248649231" target="_blank" rel="noopener">
+            <a class="primary-button" href="https://wa.me/50248649231" target="_blank" rel="noopener noreferrer">
                 Hablar con Bobby
             </a>
         </section>
@@ -255,9 +266,10 @@
             Referencia: A unas cuadras de la Marimba.
         </address>
 
-        <a href="https://wa.me/50248649231" target="_blank" rel="noopener">
+        <a href="https://wa.me/50248649231" target="_blank" rel="noopener noreferrer">
             WhatsApp 4864-9231
         </a>
+        <p><a href="privacy.html">Privacidad</a> · <a href="terms.html">Términos</a> · <a href="data-deletion.html">Eliminar datos</a> · <a href="contact.html">Contacto</a></p>
     </footer>
 
     <script>
@@ -268,6 +280,10 @@
         const saldoForm = document.querySelector("#saldoForm");
         const clubMessage = document.querySelector("#clubSuccess");
         const saldoResult = document.querySelector("#saldoResult");
+        const saldoCard = document.querySelector("#saldoCard");
+        const saldoCardLabel = document.querySelector("#saldoCardLabel");
+        const saldoCardAmount = document.querySelector("#saldoCardAmount");
+        const saldoCardMessage = document.querySelector("#saldoCardMessage");
         const welcomePanel = document.querySelector("#welcomePanel");
         const welcomeName = document.querySelector("#welcomeName");
         const welcomePhone = document.querySelector("#welcomePhone");
@@ -313,7 +329,6 @@
                     email: formData.get("email") || "",
                     ciudad: formData.get("ciudad") || "",
                     tipo_cliente: formData.get("tipo_cliente") || "",
-                    fecha_nacimiento: formData.get("fecha_nacimiento") || "",
                     source: "rewards.html",
                 };
 
@@ -369,14 +384,33 @@
 
                 const formData = new FormData(saldoForm);
                 const telefono = String(formData.get("telefono") || "").trim();
+                const submitButton = saldoForm.querySelector('button[type="submit"]');
 
                 if (!telefono) {
                     setMessage(saldoResult, "El numero de telefono es obligatorio.", true);
                     return;
                 }
 
+                const previousCard = {
+                    label: saldoCardLabel?.textContent || "Ejemplo de saldo acumulado",
+                    amount: saldoCardAmount?.textContent || "Q125.00",
+                    message: saldoCardMessage?.textContent || "Comprá, acumulá y usalo como descuento",
+                    ariaLabel: saldoCard?.getAttribute("aria-label") || "Ejemplo de saldo acumulado",
+                    className: saldoCard?.className || "saldo-card",
+                };
+
                 try {
                     setMessage(saldoResult, "Consultando saldo...");
+                    if (submitButton) submitButton.disabled = true;
+                    if (saldoCard) {
+                        saldoCard.classList.add("is-loading");
+                        saldoCard.setAttribute("aria-busy", "true");
+                        saldoCard.setAttribute("aria-label", "Consultando saldo");
+                    }
+                    if (saldoCardLabel) saldoCardLabel.textContent = "Consultando tu saldo";
+                    if (saldoCardAmount) saldoCardAmount.textContent = "—";
+                    if (saldoCardMessage) saldoCardMessage.textContent = "Un momento, por favor...";
+
                     const data = await parseJsonResponse(await fetch(
                         `${API_BASE_URL}/api/rewards/balance`,
                         {
@@ -385,19 +419,39 @@
                             body: JSON.stringify({telefono}),
                         }
                     ));
-                    const points = Number(data.saldo || 0);
-                    setMessage(
-                        saldoResult,
-                        points === 0
-                            ? "Tu saldo disponible es de 0 puntos."
-                            : `Tu saldo disponible es de ${points} puntos.`
-                    );
+                    const balance = Number(data.saldo || 0);
+
+                    if (saldoCard) {
+                        saldoCard.classList.remove("is-loading");
+                        saldoCard.classList.add("is-personal");
+                        saldoCard.setAttribute("aria-label", "Tu saldo disponible");
+                    }
+                    if (saldoCardLabel) saldoCardLabel.textContent = "Tu saldo disponible";
+                    if (saldoCardAmount) saldoCardAmount.textContent = formatCurrency(balance);
+                    if (saldoCardMessage) {
+                        saldoCardMessage.textContent = balance === 0
+                            ? "Realizá tu próxima compra y empezá a acumular"
+                            : "Disponible para descuento en futuras compras";
+                    }
+
+                    setMessage(saldoResult, "Saldo actualizado correctamente.");
+                    saldoCard?.scrollIntoView({behavior: "smooth", block: "center"});
                 } catch (error) {
+                    if (saldoCard) {
+                        saldoCard.className = previousCard.className;
+                        saldoCard.setAttribute("aria-label", previousCard.ariaLabel);
+                    }
+                    if (saldoCardLabel) saldoCardLabel.textContent = previousCard.label;
+                    if (saldoCardAmount) saldoCardAmount.textContent = previousCard.amount;
+                    if (saldoCardMessage) saldoCardMessage.textContent = previousCard.message;
                     setMessage(
                         saldoResult,
                         error.message || "Error de conexion al consultar el saldo.",
                         true
                     );
+                } finally {
+                    saldoCard?.removeAttribute("aria-busy");
+                    if (submitButton) submitButton.disabled = false;
                 }
             });
         }

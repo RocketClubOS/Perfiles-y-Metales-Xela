@@ -50,7 +50,6 @@ if (clubForm) {
             email: formData.get("email") || "",
             ciudad: formData.get("ciudad") || "",
             tipo_cliente: formData.get("tipo_cliente") || "",
-            fecha_nacimiento: formData.get("fecha_nacimiento") || "",
             source: "rewards.html",
         };
 
