@@ -1075,7 +1075,7 @@ main,
 
 @media (max-width: 768px) {
     .site-header {
-        background: #111;
+        background: #202831;
         border-bottom: 1px solid rgba(255, 193, 7, .15);
     }
 
@@ -1123,7 +1123,7 @@ main,
         top: 90px;
         left: 18px;
         right: 18px;
-        background: #070707;
+        background: #171D24;
         border: 1px solid rgba(255,255,255,.14);
         border-radius: 18px;
         padding: 12px;
