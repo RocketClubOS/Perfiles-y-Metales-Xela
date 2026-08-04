@@ -156,9 +156,9 @@ main,
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 32px;
     background:
-        radial-gradient(circle at 8% 18%, rgba(255, 212, 0, 0.14), transparent 24%),
-        radial-gradient(circle at 92% 82%, rgba(68, 111, 223, 0.2), transparent 32%),
-        linear-gradient(135deg, #071738 0%, #102b69 52%, #091b43 100%);
+        radial-gradient(circle at 8% 18%, rgba(255, 212, 0, 0.09), transparent 24%),
+        radial-gradient(circle at 92% 82%, rgba(95, 132, 164, 0.14), transparent 32%),
+        linear-gradient(135deg, #202831 0%, #2c3743 50%, #17212b 100%);
     box-shadow: 0 30px 80px rgba(7, 23, 56, 0.2);
 }
 
@@ -839,6 +839,26 @@ main,
 @media (min-width: 760px) {
     .nav-links {
         display: flex;
+    }
+
+    .saldo-card {
+        border-color: rgba(255, 212, 0, 0.5);
+        box-shadow:
+            0 34px 68px rgba(8, 24, 61, 0.34),
+            0 12px 24px rgba(8, 24, 61, 0.2),
+            0 0 0 1px rgba(255, 212, 0, 0.12),
+            0 0 42px rgba(255, 212, 0, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.24);
+    }
+
+    .saldo-card:hover {
+        transform: translateY(-7px);
+        box-shadow:
+            0 42px 78px rgba(8, 24, 61, 0.38),
+            0 14px 28px rgba(8, 24, 61, 0.22),
+            0 0 0 1px rgba(255, 212, 0, 0.18),
+            0 0 52px rgba(255, 212, 0, 0.14),
+            inset 0 1px 0 rgba(255, 255, 255, 0.26);
     }
 
     .hero-layout,
