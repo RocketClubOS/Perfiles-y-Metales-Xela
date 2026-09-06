@@ -2375,6 +2375,113 @@ body.gallery-modal-open{
 }
 
 /* =========================
+   ADDITIONS: WEEKLY PROMOTIONS (SHARED - DESKTOP + MOBILE)
+========================= */
+.promo-section{
+    padding:60px 30px;
+    background:#050505;
+}
+
+.promo-section .section-header h2,
+.promo-section .mobile-section-title h2{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.promo-fire{
+    font-size:0.8em;
+}
+
+.promo-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+}
+
+.promo-card{
+    position:relative;
+    background:linear-gradient(180deg, #1a1a1a, #0b0b0b);
+    border:1px solid rgba(245,180,0,0.35);
+    border-radius:16px;
+    overflow:hidden;
+    padding-bottom:20px;
+    box-shadow:0 0 25px rgba(245,180,0,0.08);
+}
+
+.promo-tag{
+    position:absolute;
+    top:14px;
+    left:14px;
+    z-index:1;
+    background:#f5b400;
+    color:#000;
+    font-size:11px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    padding:6px 12px;
+    border-radius:999px;
+}
+
+.promo-image{
+    height:180px;
+}
+
+.promo-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.promo-card h3{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:26px;
+    color:#fff;
+    padding:16px 18px 0;
+    letter-spacing:1px;
+}
+
+.promo-card p{
+    color:#bdbdbd;
+    font-size:14px;
+    line-height:1.5;
+    padding:8px 18px 18px;
+}
+
+.promo-btn{
+    display:inline-block;
+    margin:0 18px;
+    background:#f5b400;
+    color:#000;
+    text-decoration:none;
+    font-weight:800;
+    font-size:13px;
+    padding:12px 18px;
+    border-radius:10px;
+    transition:all .3s ease;
+}
+
+.promo-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(245,180,0,0.3);
+}
+
+.promo-note{
+    margin-top:24px;
+    color:#8a8a8a;
+    font-size:13px;
+    text-align:center;
+}
+
+@media(max-width:768px){
+    .promo-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+/* =========================
    ADDITIONS: TESTIMONIALS (SHARED - DESKTOP + MOBILE)
 ========================= */
 .testimonials-section{
