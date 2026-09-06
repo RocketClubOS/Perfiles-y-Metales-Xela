@@ -2375,6 +2375,92 @@ body.gallery-modal-open{
 }
 
 /* =========================
+   ADDITIONS: TESTIMONIALS (SHARED - DESKTOP + MOBILE)
+========================= */
+.testimonials-section{
+    padding:60px 30px;
+    background:#050505;
+}
+
+.testimonials-track{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    padding:4px 4px 20px;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+}
+
+.testimonials-track::-webkit-scrollbar{
+    display:none;
+}
+
+.testimonial-card{
+    flex:0 0 320px;
+    scroll-snap-align:start;
+    background:linear-gradient(180deg, #151515, #0a0a0a);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:18px;
+    padding:26px 24px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.testimonial-stars{
+    color:#f5b400;
+    font-size:18px;
+    letter-spacing:2px;
+}
+
+.testimonial-quote{
+    color:#cfcfcf;
+    font-size:15px;
+    line-height:1.6;
+    flex:1;
+}
+
+.testimonial-author{
+    color:#fff;
+    font-weight:700;
+    font-size:14px;
+    border-top:1px solid rgba(255,255,255,0.1);
+    padding-top:14px;
+}
+
+@media(max-width:768px){
+    .testimonial-card{
+        flex:0 0 260px;
+        padding:20px;
+    }
+}
+
+/* =========================
+   ADDITIONS: SCROLL REVEAL ANIMATION (SHARED - DESKTOP + MOBILE)
+========================= */
+/* El estado "oculto antes de aparecer" solo se activa si reveal.js confirma
+   que puede manejarlo (clase reveal-ready en <html>). Sin JS, o si JS falla,
+   el contenido queda visible de entrada: nunca depende de la animacion. */
+html.reveal-ready .reveal-on-scroll{
+    opacity:0;
+    transform:translateY(28px);
+    transition:opacity .7s ease, transform .7s ease;
+}
+
+html.reveal-ready .reveal-on-scroll.is-visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce){
+    html.reveal-ready .reveal-on-scroll{
+        opacity:1;
+        transform:none;
+        transition:none;
+    }
+}
+
+/* =========================
    ADDITIONS: FLOATING WHATSAPP BUTTON (SHARED - DESKTOP + MOBILE)
 ========================= */
 .whatsapp-float{
