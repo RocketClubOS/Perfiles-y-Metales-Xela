@@ -2373,3 +2373,440 @@ body.gallery-modal-open{
     color: #fff;
     margin: 0 .5rem;
 }
+
+/* =========================
+   ADDITIONS: FLOATING WHATSAPP BUTTON (SHARED - DESKTOP + MOBILE)
+========================= */
+.whatsapp-float{
+    position:fixed;
+    left:24px;
+    bottom:24px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    line-height:1;
+    text-decoration:none;
+    box-shadow:0 8px 24px rgba(0,0,0,0.35);
+    z-index:9998;
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.whatsapp-float:hover{
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 10px 30px rgba(37,211,102,0.45);
+}
+
+#chatBox:not(.hidden) ~ .whatsapp-float{
+    display:none;
+}
+
+@media(max-width:768px){
+    .whatsapp-float{
+        left:16px;
+        bottom:16px;
+        width:52px;
+        height:52px;
+        font-size:26px;
+    }
+}
+
+/* =========================
+   ADDITIONS: TRUST / SOCIAL PROOF STATS (SHARED - DESKTOP + MOBILE)
+========================= */
+.trust-stats-section{
+    padding:40px 30px;
+    background:#050505;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:18px;
+    border-top:1px solid rgba(255,255,255,0.08);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.trust-stat{
+    text-align:center;
+    padding:20px 10px;
+}
+
+.trust-stat-number{
+    display:block;
+    font-family:'Bebas Neue', sans-serif;
+    font-size:44px;
+    color:#f5b400;
+    line-height:1;
+    margin-bottom:8px;
+    letter-spacing:1px;
+}
+
+.trust-stat-label{
+    display:block;
+    color:#e0e0e0;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:0.3px;
+    line-height:1.4;
+}
+
+@media(max-width:768px){
+    .trust-stats-section{
+        grid-template-columns:1fr;
+        gap:0;
+        padding:10px 20px 20px;
+    }
+
+    .trust-stat{
+        padding:14px 10px;
+        border-bottom:1px solid rgba(255,255,255,0.06);
+    }
+
+    .trust-stat:last-child{
+        border-bottom:none;
+    }
+}
+
+/* =========================
+   ADDITIONS: INFO / HOURS STRIP (DESKTOP)
+========================= */
+.info-strip{
+    padding:30px;
+    background:#050505;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:18px;
+}
+
+.info-card{
+    background:linear-gradient(180deg, #181818, #090909);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:18px;
+    padding:25px 20px;
+}
+
+.info-card-icon{
+    color:#f5b400;
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.info-card h3{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:24px;
+    line-height:1;
+    margin-bottom:12px;
+    letter-spacing:1px;
+}
+
+.info-card p{
+    color:#bdbdbd;
+    font-size:14px;
+    line-height:1.5;
+}
+
+@media(max-width:768px){
+    .info-strip{
+        grid-template-columns:1fr;
+    }
+}
+
+/* =========================
+   ADDITIONS: CLUB XELA TEASER (SHARED + DESKTOP)
+========================= */
+.club-teaser-eyebrow{
+    display:inline-block;
+    color:#f5b400;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1.6px;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+
+.club-teaser-section{
+    padding:30px;
+    background:#050505;
+}
+
+.club-teaser-card{
+    background:linear-gradient(135deg, #151515, #080808);
+    border:1px solid rgba(245,180,0,0.35);
+    border-radius:22px;
+    padding:40px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+}
+
+.club-teaser-text h2{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:40px;
+    line-height:1;
+    margin-bottom:12px;
+}
+
+.club-teaser-text h2 span{
+    color:#f5b400;
+}
+
+.club-teaser-text p{
+    color:#cfcfcf;
+    font-size:16px;
+    max-width:520px;
+    line-height:1.5;
+}
+
+.club-teaser-btn{
+    background:#f5b400;
+    color:#000;
+    text-decoration:none;
+    font-weight:800;
+    padding:16px 28px;
+    border-radius:14px;
+    white-space:nowrap;
+    transition:all .3s ease;
+}
+
+.club-teaser-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(245,180,0,0.25);
+}
+
+/* =========================
+   ADDITIONS: COMBO TEASER (DESKTOP)
+========================= */
+.combo-teaser-section{
+    padding:30px;
+    background:#050505;
+    display:grid;
+    grid-template-columns:1fr 1.3fr;
+    gap:30px;
+    align-items:center;
+}
+
+.combo-teaser-image img{
+    width:100%;
+    border-radius:20px;
+    display:block;
+    border:1px solid rgba(255,255,255,0.12);
+}
+
+.combo-teaser-text h2{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:42px;
+    line-height:1;
+    margin-bottom:16px;
+}
+
+.combo-teaser-text h2 span{
+    color:#f5b400;
+}
+
+.combo-teaser-text p{
+    color:#cfcfcf;
+    font-size:16px;
+    line-height:1.6;
+    margin-bottom:24px;
+}
+
+.combo-teaser-btn{
+    display:inline-block;
+    background:#111;
+    color:#fff;
+    border:1px solid rgba(255,255,255,0.15);
+    text-decoration:none;
+    font-weight:700;
+    padding:15px 30px;
+    border-radius:12px;
+    transition:all .3s ease;
+}
+
+.combo-teaser-btn:hover{
+    border-color:#f5b400;
+    color:#f5b400;
+}
+
+@media(max-width:768px){
+    .combo-teaser-section{
+        grid-template-columns:1fr;
+    }
+}
+
+/* =========================
+   ADDITIONS: FAQ (SHARED - DESKTOP + MOBILE)
+========================= */
+.faq-section{
+    padding:60px 30px;
+    background:#050505;
+}
+
+.faq-list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    max-width:900px;
+}
+
+.faq-item{
+    background:linear-gradient(180deg, #151515, #0a0a0a);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:14px;
+    padding:18px 22px;
+}
+
+.faq-item summary{
+    cursor:pointer;
+    font-weight:700;
+    font-size:16px;
+    color:#fff;
+    list-style:none;
+}
+
+.faq-item summary::-webkit-details-marker{
+    display:none;
+}
+
+.faq-item summary::after{
+    content:"+";
+    float:right;
+    color:#f5b400;
+    font-weight:800;
+    font-size:20px;
+}
+
+.faq-item[open] summary::after{
+    content:"\2212";
+}
+
+.faq-item p{
+    margin-top:14px;
+    color:#bdbdbd;
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* =========================
+   ADDITIONS: MOBILE INFO STRIP
+========================= */
+.mobile-info-strip{
+    padding:0 18px 30px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:14px;
+}
+
+.mobile-info-strip article{
+    background:#0d0d0d;
+    border:1px solid #222;
+    border-radius:14px;
+    padding:18px 14px;
+}
+
+/* =========================
+   ADDITIONS: MOBILE CLUB TEASER
+========================= */
+.mobile-club-teaser{
+    margin:0 18px 30px;
+    background:linear-gradient(135deg, #151515, #080808);
+    border:1px solid rgba(245,170,0,0.35);
+    border-radius:18px;
+    padding:28px 22px;
+    text-align:center;
+}
+
+.mobile-club-teaser h2{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:30px;
+    line-height:1;
+    margin:6px 0 12px;
+}
+
+.mobile-club-teaser h2 span{
+    color:#f5aa00;
+}
+
+.mobile-club-teaser p{
+    color:#cfcfcf;
+    font-size:14px;
+    line-height:1.5;
+    margin-bottom:20px;
+}
+
+.mobile-club-teaser-btn{
+    display:inline-block;
+    background:#f5aa00;
+    color:#000;
+    text-decoration:none;
+    font-weight:800;
+    padding:14px 24px;
+    border-radius:12px;
+}
+
+/* =========================
+   ADDITIONS: MOBILE COMBO TEASER
+========================= */
+.mobile-combo-teaser{
+    margin:0 18px 30px;
+    background:#0d0d0d;
+    border:1px solid #222;
+    border-radius:18px;
+    overflow:hidden;
+    padding-bottom:22px;
+    text-align:center;
+}
+
+.mobile-combo-teaser img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    display:block;
+    margin-bottom:18px;
+}
+
+.mobile-combo-teaser h2{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:28px;
+    line-height:1;
+    margin-bottom:12px;
+    padding:0 18px;
+}
+
+.mobile-combo-teaser h2 span{
+    color:#f5aa00;
+}
+
+.mobile-combo-teaser p{
+    color:#cfcfcf;
+    font-size:14px;
+    line-height:1.5;
+    margin-bottom:18px;
+    padding:0 18px;
+}
+
+.mobile-combo-teaser-btn{
+    display:inline-block;
+    background:#f5aa00;
+    color:#000;
+    text-decoration:none;
+    font-weight:800;
+    padding:14px 24px;
+    border-radius:12px;
+}
+
+/* =========================
+   ADDITIONS: MOBILE FAQ
+========================= */
+.mobile-faq-section{
+    padding:0 18px 30px;
+}
+
+.mobile-faq-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
