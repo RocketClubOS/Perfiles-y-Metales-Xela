@@ -196,10 +196,12 @@ body{
 }
 
 .product-image{
+    display:block;
     height:160px;
     background-size:cover;
     background-position:center;
     margin-bottom:15px;
+    cursor:pointer;
 }
 
 .tube{
@@ -905,6 +907,10 @@ body{
     width:100%;
     height:120px;
     object-fit:cover;
+    display:block;
+}
+
+.mobile-product-card > a{
     display:block;
 }
 

@@ -144,6 +144,10 @@ object-fit:cover;
 display:block;
 }
 
+.product-card > a{
+display:block;
+}
+
 .product-card div{
 padding:25px;
 }

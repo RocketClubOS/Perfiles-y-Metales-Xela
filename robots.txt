@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rocketclubos.github.io/Perfiles-y-Metales-Xela/sitemap.xml
