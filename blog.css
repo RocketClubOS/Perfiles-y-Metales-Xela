@@ -434,6 +434,47 @@ a{
 }
 
 /* =========================
+   RELATED POSTS
+========================= */
+.related-posts{
+    max-width:820px;
+    margin:0 auto;
+    padding:0 30px 60px;
+}
+
+.related-posts h2{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:26px;
+    letter-spacing:0.3px;
+    margin-bottom:16px;
+    color:#fff;
+}
+
+.related-posts ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.related-posts a{
+    color:#f5b400;
+    text-decoration:none;
+    font-weight:600;
+    font-size:15px;
+}
+
+.related-posts a:hover{
+    text-decoration:underline;
+}
+
+@media(max-width:768px){
+    .related-posts{
+        padding:0 20px 40px;
+    }
+}
+
+/* =========================
    FOOTER (matches site-wide legal footer)
 ========================= */
 .legal-footer{
