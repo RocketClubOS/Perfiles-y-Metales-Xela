@@ -38,6 +38,17 @@
         }
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://rocketclubos.github.io/Perfiles-y-Metales-Xela/index.html" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://rocketclubos.github.io/Perfiles-y-Metales-Xela/blog/blog.html" },
+            { "@type": "ListItem", "position": 3, "name": "Tipos de perfiles metálicos y sus usos en la construcción", "item": "https://rocketclubos.github.io/Perfiles-y-Metales-Xela/blog/perfiles-metalicos-tipos-usos.html" }
+        ]
+    }
+    </script>
 </head>
 
 <body>
@@ -71,10 +82,26 @@
     <a href="https://wa.me/50248649231" class="whatsapp-btn">WhatsApp</a>
 </nav>
 
+<div class="post-cover" style="background-image:url('../images/gallery-perfiles.jpg');" role="img" aria-label="Perfiles metálicos apilados en bodega"></div>
+
 <header class="post-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Inicio</a>
+        <span>/</span>
+        <a href="blog.html">Blog</a>
+        <span>/</span>
+        <span class="current">Tipos de perfiles metálicos y sus usos en la construcción</span>
+    </nav>
     <span class="post-tag">Guía</span>
     <h1>Tipos de perfiles metálicos y sus usos en la construcción</h1>
     <div class="post-meta">19 septiembre 2026 · 5 min de lectura · Perfiles y Metales Xela</div>
+    <div class="post-author">
+        <div class="post-author-avatar">PM</div>
+        <div class="post-author-info">
+            <strong>Perfiles y Metales Xela</strong>
+            <span>Materiales para herrería y construcción en Quetzaltenango</span>
+        </div>
+    </div>
 </header>
 
 <main class="post-body">
@@ -171,11 +198,20 @@
 
 <section class="related-posts">
     <h2>También te puede interesar</h2>
-    <ul>
-        <li><a href="elegir-perfil-metalico-correcto.html">Cómo elegir el perfil metálico correcto para tu estructura</a></li>
-        <li><a href="precio-acero-guatemala.html">¿Qué está pasando con el precio del acero en Guatemala?</a></li>
-        <li><a href="bodega-a-mezzanine-caso-real.html">De la bodega al mezzanine: un caso real en la zona 3</a></li>
-    </ul>
+    <div class="related-posts-grid">
+        <a class="related-card" href="elegir-perfil-metalico-correcto.html">
+            <div class="related-card-image" style="background-image:url('../images/structures.jpg');"></div>
+            <span>Cómo elegir el perfil metálico correcto para tu estructura</span>
+        </a>
+        <a class="related-card" href="precio-acero-guatemala.html">
+            <div class="related-card-image" style="background-image:url('../images/merca.jpg');"></div>
+            <span>¿Qué está pasando con el precio del acero en Guatemala?</span>
+        </a>
+        <a class="related-card" href="bodega-a-mezzanine-caso-real.html">
+            <div class="related-card-image" style="background-image:url('../images/galera.jpg');"></div>
+            <span>De la bodega al mezzanine: un caso real en la zona 3</span>
+        </a>
+    </div>
 </section>
 
 <footer class="legal-footer">
