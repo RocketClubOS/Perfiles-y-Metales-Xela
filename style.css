@@ -2368,17 +2368,58 @@ body.gallery-modal-open{
     .gallery-lightbox,
     .gallery-lightbox button{ transition:none; }
 }
-.brand-signoff {
-    padding: 40px 20px;
+.brand-story {
+    padding: 60px 20px;
     text-align: center;
     background: #050505;
     border-top: 1px solid rgba(255,255,255,0.08);
 }
 
-.brand-signoff img {
+.brand-story-logo {
     width: 100%;
     max-width: 320px;
     height: auto;
+    margin-bottom: 40px;
+}
+
+.brand-story-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.brand-story-block {
+    background: linear-gradient(180deg, #1a1a1a, #0b0b0b);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    padding: 30px 28px;
+    text-align: left;
+}
+
+.brand-story-block h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: 0.5px;
+    color: #f5b400;
+    margin-bottom: 12px;
+}
+
+.brand-story-block p {
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+@media(min-width: 769px) {
+    .brand-story-logo {
+        max-width: 560px;
+    }
+
+    .brand-story-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 /* Enlaces legales aditivos; conserva la identidad visual existente. */
