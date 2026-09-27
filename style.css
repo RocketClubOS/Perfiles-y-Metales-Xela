@@ -2368,6 +2368,19 @@ body.gallery-modal-open{
     .gallery-lightbox,
     .gallery-lightbox button{ transition:none; }
 }
+.brand-signoff {
+    padding: 40px 20px;
+    text-align: center;
+    background: #050505;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.brand-signoff img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+}
+
 /* Enlaces legales aditivos; conserva la identidad visual existente. */
 .legal-footer {
     padding: 1rem;

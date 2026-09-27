@@ -206,6 +206,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://rocketclubos.github.io/Perfiles-y-Metales-Xela/blog/hecho-en-xela-para-xela.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://rocketclubos.github.io/Perfiles-y-Metales-Xela/encuesta.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
