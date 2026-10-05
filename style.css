@@ -471,11 +471,41 @@ body{
 
 @media(max-width:600px){
     .chat-box{
-        right:15px;
-        left:15px;
-        bottom:15px;
-        width:auto;
-        height:70vh;
+        right:14px;
+        left:auto;
+        bottom:14px;
+        width:min(330px, calc(100% - 28px));
+        height:420px;
+        height:min(420px, 58dvh);
+        max-height:calc(100dvh - 90px);
+        border-radius:16px;
+    }
+
+    .chat-header{
+        padding:12px 14px;
+    }
+
+    .chat-header strong{
+        font-size:19px;
+    }
+
+    .chat-messages{
+        padding:14px;
+        gap:10px;
+    }
+
+    .chat-input{
+        padding:10px;
+        gap:8px;
+    }
+
+    .chat-input input{
+        min-width:0;
+        padding:10px;
+    }
+
+    .chat-input button{
+        padding:0 12px;
     }
 }
 .hidden {
