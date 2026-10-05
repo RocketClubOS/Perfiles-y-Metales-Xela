@@ -14,7 +14,12 @@ const mobileBigButton = document.querySelector(".mobile-btn");
 function openChat() {
     console.log("✅ Abriendo chat");
     chatBox.classList.remove("hidden");
-    chatInput.focus();
+
+    // En computadoras enfocamos el campo de inmediato. En teléfonos, hacerlo
+    // abre el teclado y provoca que Safari acerque la página automáticamente.
+    if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        chatInput.focus();
+    }
 }
 
 if (desktopButton) {
@@ -31,6 +36,7 @@ if (mobileBigButton) {
 
 if (closeChat) {
     closeChat.addEventListener("click", () => {
+        chatInput.blur();
         chatBox.classList.add("hidden");
     });
 }

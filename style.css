@@ -502,6 +502,7 @@ body{
     .chat-input input{
         min-width:0;
         padding:10px;
+        font-size:16px;
     }
 
     .chat-input button{
