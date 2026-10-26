@@ -3067,3 +3067,58 @@ html.reveal-ready .reveal-on-scroll.is-visible{
     flex-direction:column;
     gap:12px;
 }
+/* =========================
+   SEO SECTION (HOME + MOBILE)
+========================= */
+.seo-section{
+    padding:60px 30px 20px;
+    background:#050505;
+}
+
+.seo-intro{
+    max-width:900px;
+    color:#bdbdbd;
+    font-size:15px;
+    line-height:1.7;
+    margin:0 0 26px;
+}
+
+.seo-links{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:14px;
+    max-width:1100px;
+}
+
+.seo-link{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    padding:18px 20px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,0.12);
+    background:linear-gradient(180deg, #151515, #0a0a0a);
+    text-decoration:none;
+    color:#fff;
+}
+
+.seo-link strong{
+    font-size:15px;
+    color:#f5b400;
+}
+
+.seo-link span{
+    font-size:13px;
+    color:#bdbdbd;
+    line-height:1.5;
+}
+
+.seo-link:hover{
+    border-color:#f5b400;
+}
+
+@media (max-width:768px){
+    .seo-section{
+        padding:40px 18px 10px;
+    }
+}
