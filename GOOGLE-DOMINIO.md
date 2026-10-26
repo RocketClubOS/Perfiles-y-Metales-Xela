@@ -33,7 +33,7 @@ Es lo que decide quién aparece en "ferretería cerca de mí" y en el mapa de "m
 1. ¿Venden costaneras para techo? — Sí. Mandanos las medidas de tu techo por WhatsApp (4864-9231) y te cotizamos.
 2. ¿Venden lámina galvanizada? — Sí, lámina acanalada, lisa y estampada, con cumbreras, canales y tornillos.
 3. ¿Puedo cotizar sin ir al local? — Sí, enviá producto, medida, espesor, largo y cantidad por WhatsApp.
-4. ¿Hacen entregas? — Escribinos con tu proyecto y ubicación y te confirmamos.
+4. ¿Cómo retiro mi pedido? — Cotizá por WhatsApp y pasá por el local de la zona 2: ves tu material, elegís las piezas y te lo llevás en el momento.
 5. ¿Qué marcas manejan? — Trabajamos con marcas como Lincoln y Corona, entre otras.
 6. ¿Dónde están? — 10 calle A 5-29 zona 2, Quetzaltenango.
 
@@ -120,6 +120,5 @@ Con los datos reales de Search Console, la siguiente ronda de artículos se escr
 ## Qué falta que decidas vos
 
 1. El horario real.
-2. Si hacen entregas y a dónde.
-3. Qué costaneras, calibres y medidas manejan realmente.
-4. El nombre del dominio.
+2. Qué costaneras, calibres y medidas manejan realmente.
+3. El nombre del dominio.
