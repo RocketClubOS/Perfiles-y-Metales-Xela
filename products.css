@@ -419,3 +419,58 @@ font-size:2.2rem;
         margin-top: 8px;
     }
 }
+/* ========================================
+SEO CATEGORY GUIDES
+======================================== */
+
+.products-seo{
+max-width:1200px;
+margin:auto;
+padding:60px 25px 0;
+}
+
+.products-seo h2{
+text-align:center;
+font-size:2.2rem;
+margin-bottom:12px;
+}
+
+.products-seo > p{
+text-align:center;
+color:#bbb;
+line-height:1.7;
+margin:0 auto 30px;
+max-width:750px;
+}
+
+.products-seo-links{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:16px;
+}
+
+.products-seo-links a{
+display:flex;
+flex-direction:column;
+gap:6px;
+padding:20px;
+background:#111;
+border:1px solid rgba(255,255,255,.08);
+border-radius:16px;
+text-decoration:none;
+color:#fff;
+}
+
+.products-seo-links a strong{
+color:#ffc107;
+}
+
+.products-seo-links a span{
+color:#bbb;
+font-size:.9rem;
+line-height:1.5;
+}
+
+.products-seo-links a:hover{
+border-color:#ffc107;
+}
