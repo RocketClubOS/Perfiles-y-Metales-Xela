@@ -959,3 +959,215 @@ a{
 .legal-footer a:hover{
     color:#f5b400;
 }
+
+/* =========================
+   COTIZADOR, VISITA Y PAGINAS DE AYUDA
+========================= */
+.quote-form{
+    margin:10px 0 30px;
+}
+
+.quote-row{
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    gap:12px;
+    padding:18px;
+    margin-bottom:14px;
+    background:linear-gradient(180deg, #151515, #0a0a0a);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:14px;
+    align-items:end;
+}
+
+.quote-row .quote-prod{
+    grid-column:span 3;
+}
+
+.quote-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+.quote-wide{
+    grid-column:1 / -1;
+}
+
+.quote-field{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    font-size:13px;
+    font-weight:600;
+    color:#d6d6d6;
+}
+
+.quote-field input,
+.quote-field select,
+.quote-field textarea{
+    width:100%;
+    padding:12px 14px;
+    background:#0b0b0b;
+    color:#fff;
+    border:1px solid rgba(255,255,255,0.18);
+    border-radius:10px;
+    font-family:inherit;
+    font-size:15px;
+}
+
+.quote-field input:focus,
+.quote-field select:focus,
+.quote-field textarea:focus{
+    outline:2px solid #f5b400;
+    outline-offset:1px;
+}
+
+.quote-remove{
+    grid-column:span 6;
+    justify-self:end;
+    background:none;
+    border:none;
+    color:#9a9a9a;
+    font-family:inherit;
+    font-size:13px;
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+.quote-add,
+.quote-send,
+.quote-copy{
+    font-family:inherit;
+    font-weight:700;
+    font-size:15px;
+    border-radius:10px;
+    padding:14px 22px;
+    cursor:pointer;
+}
+
+.quote-add{
+    background:transparent;
+    color:#f5b400;
+    border:1px dashed rgba(245,180,0,0.6);
+}
+
+.quote-send{
+    background:#f5b400;
+    color:#111;
+    border:none;
+}
+
+.quote-copy{
+    background:transparent;
+    color:#fff;
+    border:1px solid rgba(255,255,255,0.3);
+}
+
+.quote-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:18px;
+}
+
+.quote-hint{
+    font-size:14px !important;
+    color:#9a9a9a !important;
+    margin-top:14px;
+}
+
+.quote-preview{
+    padding:18px 20px;
+    background:#101010;
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:14px;
+}
+
+.quote-preview strong{
+    display:block;
+    margin-bottom:10px;
+    color:#f5b400;
+    font-size:13px;
+    letter-spacing:0.6px;
+    text-transform:uppercase;
+}
+
+.quote-preview pre{
+    white-space:pre-wrap;
+    word-break:break-word;
+    font-family:inherit;
+    font-size:15px;
+    line-height:1.6;
+    color:#e8e8e8;
+}
+
+.quote-error{
+    color:#ff8a80 !important;
+    margin-top:14px;
+}
+
+.quote-status{
+    color:#9fd89f !important;
+    margin-top:10px;
+}
+
+.visit-card{
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:26px;
+    margin:10px 0 30px;
+    padding:22px;
+    background:linear-gradient(180deg, #151515, #0a0a0a);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:16px;
+}
+
+.visit-card img{
+    width:100%;
+    height:auto;
+    border-radius:12px;
+    object-fit:cover;
+}
+
+.visit-info h2{
+    margin-top:0;
+}
+
+.visit-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.visit-btn{
+    display:inline-block;
+    padding:12px 18px;
+    background:#f5b400;
+    color:#111;
+    font-weight:700;
+    font-size:14px;
+    border-radius:10px;
+    text-decoration:none;
+}
+
+.visit-btn-alt{
+    background:transparent;
+    color:#fff;
+    border:1px solid rgba(255,255,255,0.3);
+}
+
+@media (max-width:720px){
+    .quote-row{
+        grid-template-columns:1fr 1fr;
+    }
+    .quote-row .quote-prod,
+    .quote-remove{
+        grid-column:1 / -1;
+    }
+    .quote-grid{
+        grid-template-columns:1fr;
+    }
+    .visit-card{
+        grid-template-columns:1fr;
+    }
+}
