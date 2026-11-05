@@ -46,6 +46,6 @@ Fecha: 26 de octubre de 2026
 1. **Google Business Profile** (Google Maps): es lo que más pesa en búsquedas como "ferretería cerca de mí Quetzaltenango". Fichas con dirección, teléfono, horario, fotos y categoría "Tienda de metales" o "Ferretería".
 2. **Dominio propio.** Hoy el sitio vive en `rocketclubos.github.io/...`, un subdominio de GitHub que limita el posicionamiento de marca. Un dominio tipo `perfilesymetalesxela.com` ayuda mucho.
 3. **Fotos propias** de producto con nombre de archivo descriptivo y texto alternativo.
-4. **Confirmar con la tienda**: horario real (el sitio mostraba dos versiones), qué costaneras y calibres manejan realmente, y si hacen entregas, para afinar las páginas.
+4. **Confirmar con la tienda**: horario real (el sitio mostraba dos versiones), qué costaneras y calibres manejan realmente, y para afinar las páginas.
 5. **Artículos futuros** (aún no existen): varilla corrugada y tamaños comunes, comparativos de precio por temporada, aluzinc frente a galvanizado y vídeos cortos de cada guía.
 6. **Medición**: a las 4 a 6 semanas, revisar en Search Console las consultas reales, ajustar títulos con baja tasa de clics y crear artículos para las consultas con impresiones sin página específica.
